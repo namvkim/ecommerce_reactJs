@@ -1,0 +1,90 @@
+{
+    "products": [{
+        "id": 1,
+        "name": "Món ngon nhất Việt Nam",
+        "price": 20,
+        "describes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum veritatis at ipsum doloremque quia quasi nostrum quo autem iste. Ex deleniti in repudiandae delectus! Ratione vitae quo voluptas explicabo unde officia porro tenetur maxime earum doloribus, excepturi odit vel, blanditiis dignissimos, fugiat ipsa cum numquam reprehenderit voluptatum! Deleniti numquam consequuntur dolorum vel quae doloremque consectetur odio impedit natus ipsam. Ut doloremque, autem architecto ea, in esse commodi eaque voluptas rerum temporibus, distinctio quam pariatur quidem tempore ab soluta inventore laboriosam similique quibusdam delectus veniam accusamus odit. Voluptatibus praesentium deserunt culpa. Cumque ad dicta, dolorum laudantium quisquam rem porro numquam obcaecati nobis, quae esse libero, unde possimus. Odio nisi placeat cum at quos. Accusamus dolorum itaque, beatae et provident quis soluta esse veniam ipsam. Architecto expedita aperiam fuga dicta ea quam unde accusantium voluptatem rerum? Deleniti, tempore officia harum itaque tempora aut, optio ab voluptatum autem odit sapiente iste exercitationem mollitia velit minima aperiam! Esse totam excepturi maiores ducimus laborum impedit repellendus maxime reiciendis eum rem. Labore, culpa maiores, quaerat doloremque aut totam praesentium temporibus officia nihil quas dolorum voluptates nam quod cupiditate tempore reiciendis tenetur adipisci blanditiis ab? Amet, debitis fuga. Alias ullam deleniti nam fugit quaerat magnam provident expedita.",
+        "category": 1,
+        "status": 1
+    }],
+    "picture": [{
+        "id": 1,
+        "id_pro": 1,
+        "pic": "https://shop.photozone.com.vn/wp-content/uploads/2016/08/cac-tan-dung-anh-sang-trong-chup-anh_photoZone-com-vn-5.jpg"
+    }],
+    "users": [{
+        "id": 1,
+        "name": "nam",
+        "pass": "123",
+        "phone": "0386005775",
+        "email": "sonnamttt@gmail.com",
+        "address": "Vĩnh Kim-Vĩnh Linh-Quảng Trị",
+        "status": 1
+    }],
+    "orders": [{
+        "id": 1,
+        "id_user": 1,
+        "date": "11/5/2020",
+        "status": 1
+    }],
+    "orders_details": [{
+        "id": 1,
+        "id_order": 1,
+        "id_pro": 1,
+        "quantity": 5
+    }],
+    "cart": [{
+        "id": 1,
+        "id_user": 1,
+        "id_pro": 1
+    }],
+    "materials": [{
+        "id": 1,
+        "name": "Bột mì",
+        "amount": 1,
+        "price": 8000,
+        "date": "10/5/2021"
+    }],
+    "admin": [{
+        "id": 1,
+        "name": "admin",
+        "pass": "12345"
+    }],
+    "admin_index": [{
+            "id": 1,
+            "name": "The FoodCirles restaurant"
+        },
+        {
+            "id": 2,
+            "name": "https://www.yourdesigner.vn/wp-content/uploads/2017/09/logo-nha-hang-phai-la-nghe-thuat-thuc-dung.png"
+        },
+        {
+            "id": 3,
+            "img": "https://www.chapter3d.com/wp-content/uploads/2020/06/anh-do-an.jpg"
+        },
+        {
+            "id": 4,
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzN_zDZ4Bf8bFfmv60dGSIJyj2o1mMP8GyexgL8ff2GI2JeFDtSGS6hfXQoKn3cIUufNA&usqp=CAU"
+        },
+        {
+            "id": 5,
+            "img": "https://cdn.tgdd.vn/Files/2019/03/07/1153472/chinese-new-year_600x800.jpg"
+        },
+        {
+            "id": 6,
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrtjQ-NwmS8ytaM34Xb7YhGYH7wUSX8c1342cFxy25sLwSRLlIB50NzPITgMmJzm8_JRQ&usqp=CAU"
+        },
+        {
+            "id": 7,
+            "img": "https://halotravel.vn/wp-content/uploads/2020/03/huong-dan-chup-anh-do-an-bang-dien-thoai-11.jpg"
+        },
+        {
+            "id": 8,
+            "img": "https://lavenderstudio.com.vn/wp-content/uploads/2017/03/chup-san-pham.jpg"
+        },
+        {
+            "id": 9,
+            "img": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aut iste culpa, quaerat quod tenetur aspernatur atque veniam tempora eaque? Dignissimos delectus itaque sunt, harum quo repudiandae assumenda atque sed inventore quasi? Modi est deleniti qui quos. Obcaecati quos quibusdam quis nostrum dicta. Maiores quo, neque eaque doloribus fugiat minus."
+        }
+    ]
+}

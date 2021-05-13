@@ -1,48 +1,9 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: none;
-    font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    color: white;
-}
-
-html {
-    background-color: white;
-    text-rendering: optimizeLegibility;
-}
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.body {
-    text-align: center;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://media.metrip.vn/images/cidre-3-2048-1459002815059-234-0-1136-2048-crop-1459002866249.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: fixed;
-}
-
-.content {
-    width: 1000px;
-    min-height: 100vh;
-    margin: 0 auto;
-    margin-top: 180px;
-    background-color: #2c3e50;
-    overflow: hidden;
-    padding: 5px;
-}
-
-.content_advan {
+.index_content_advan {
     height: 400px;
     display: flex;
 }
 
-.content_advan_img1 {
+.index_content_advan_img1 {
     height: 100%;
     width: 25%;
     margin-right: 5px;
@@ -52,7 +13,7 @@ html {
     background-size: cover;
 }
 
-.content_advan_img3 {
+.index_content_advan_img3 {
     height: 100%;
     width: 25%;
     margin-left: 5px;
@@ -62,28 +23,28 @@ html {
     background-size: cover;
 }
 
-.content_advan_img1 img,
-.content_advan_img3 img {
+.index_content_advan_img1 img,
+.index_content_advan_img3 img {
     min-height: 100%;
     min-width: 100%;
 }
 
-.content_advan_img2 {
+.index_content_advan_img2 {
     width: 50%;
     height: 100%;
 }
 
-.content_advan_img2_1,
-.content_advan_img2_2 {
+.index_content_advan_img2_1,
+.index_content_advan_img2_2 {
     height: 49.375%;
     display: flex;
 }
 
-.content_advan_img2_1 {
+.index_content_advan_img2_1 {
     margin-bottom: 5px;
 }
 
-.content_advan_img2_1_1 {
+.index_content_advan_img2_1_1 {
     width: 65%;
     height: 100%;
     margin-right: 5px;
@@ -93,7 +54,7 @@ html {
     background-size: cover;
 }
 
-.content_advan_img2_1_2 {
+.index_content_advan_img2_1_2 {
     width: 35%;
     height: 100%;
     background-image: url('http://www.foodstylistvn.com/wp-content/uploads/2014/09/tom-sauce-toi-cay-vietnam-food-stylist.jpg');
@@ -102,7 +63,7 @@ html {
     background-size: cover;
 }
 
-.content_advan_img2_2_1 {
+.index_content_advan_img2_2_1 {
     width: 35%;
     height: 100%;
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT60p9MuadYhxUZ4kBtNYHmpZ-I7NqGTW6ePA&usqp=CAU');
@@ -111,7 +72,7 @@ html {
     background-size: cover;
 }
 
-.content_advan_img2_2_2 {
+.index_content_advan_img2_2_2 {
     margin-left: 5px;
     width: 65%;
     height: 100%;
@@ -121,47 +82,48 @@ html {
     background-size: cover;
 }
 
-.content_info {
+.index_content_info {
     width: 35%;
     float: left;
     padding: 15px;
 }
 
-.content_info_title,
-.content_menu_title {
+.index_content_info_title,
+.index_content_menu_title {
     display: flex;
     align-items: flex-end;
     color: burlywood;
 }
 
-.content_info_title img,
-.content_menu_title img {
+.index_content_info_title img,
+.index_content_menu_title img {
     height: 50px;
 }
 
-.content_info_title h4,
-.content_menu_title h4 {
+.index_content_info_title h4,
+.index_content_menu_title h4 {
     font-weight: bold;
 }
 
-.content_info_main {
+.index_content_info_main {
     text-align: left;
     margin-top: 10px;
     text-align: justify;
+    color: white;
 }
 
-.content_menu {
+.index_content_menu {
     width: 65%;
     float: left;
     padding: 15px;
 }
 
-.nav-link {
+.index_nav-link {
     color: white;
     padding: .2rem 2rem;
 }
 
-.nav-link:hover {
+.index_nav-link:hover {
     color: white;
 }
 
@@ -171,30 +133,31 @@ html {
     overflow-y: auto;
 }
 
-.tab-pane_row {
+.index_tab-pane_row {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    color: white;
 }
 
-.tab-pane_row div {
+.index_tab-pane_row div {
     display: flex;
     align-items: center;
 }
 
-.tab-pane_row img {
+.index_tab-pane_row img {
     height: 50px;
 }
 
-.tab-pane_row p {
+.index_tab-pane_row p {
     margin-bottom: 0px;
 }
 
-.tab-pane_name {
+.index_tab-pane_name {
     margin-left: 10px;
 }
 
-.tab-pane_btn {
+.index_tab-pane_btn {
     padding: 2px 20px;
     background-color: #009432;
     margin: 10px;

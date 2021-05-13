@@ -1,5 +1,4 @@
 import React from 'react';
-import Allproduct from '../AllProduct';
 
 const Main=()=>{
     return(

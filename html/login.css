@@ -6,30 +6,14 @@
     box-sizing: border-box;
 }
 
-ul,
-li {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: #d83d3d;
-}
-
 .main-nav {
-    width: 90%;
-    max-width: 240px;
-    margin: 0 auto;
-    height: 100%;
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
 .main-nav ul {
-    position: absolute;
-    width: 100%;
-    top: 40%;
-    margin: 0;
-    padding: 0;
+    display: flex;
 }
 
 .main-nav li {
@@ -39,12 +23,12 @@ body {
 
 .main-nav a {
     display: block;
-    height: 50px;
+    height: 30px;
     margin: 10px;
     padding: 2px 25px;
     text-decoration: none;
     border-radius: 30px;
-    line-height: 45px;
+    line-height: 20px;
     color: #FFF;
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
@@ -53,8 +37,8 @@ body {
 }
 
 .main-nav li:nth-child(1) a {
-    background: #d83d3d;
-    border: 2px solid #fff;
+    background-image: linear-gradient( #302719, black);
+    border: 2px solid #b13131;
 }
 
 .main-nav li:nth-child(1) a:hover {
@@ -63,7 +47,7 @@ body {
 }
 
 .main-nav li:nth-child(2) a {
-    background: #9e2c2c;
+    background-image: linear-gradient( #302719, black);
     border: 2px solid #9e2c2c;
 }
 
@@ -78,7 +62,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(127, 37, 37, 0.9);
+    background: #363738d0;
     z-index: 3;
     overflow-y: auto;
     cursor: pointer;
@@ -484,4 +468,17 @@ body {
 #signup.is-selected,
 #reset-password.is-selected {
     display: block;
+}
+
+.fieldset input,
+.fieldset label {
+    color: black;
+}
+
+.user-modal a {
+    margin: 0;
+}
+
+.switcher {
+    padding-left: 0;
 }

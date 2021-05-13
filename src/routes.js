@@ -1,7 +1,7 @@
 import React from 'react';
-import Main from './compenent/main';
-import About from './compenent/about';
-import Add from './compenent/add';
+import Main from './component/main';
+import About from './component/about';
+import Add from './component/add';
 
 const routes =[
     {

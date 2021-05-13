@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.layout_header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.layout_header_logo {
+    height: 150px;
+    background-image: linear-gradient(black, #1a2025);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout_header_logo_box {
+    display: flex;
+    align-items: flex-end;
+    color: white;
+}
+
+.layout_header_logo img {
+    height: 130px;
+}
+
+.layout_header_main {
+    display: flex;
+    height: 30px;
+    background-image: linear-gradient( #302719, black);
+    font-weight: bold;
+    min-height: 30px;
+    align-items: center;
+}
+
+.layout_header_main ul {
+    margin-bottom: 0;
+}
+
+.layout_header_main a {
+    margin: 0 40px;
+    color: white;
+}
+
+.layout_header_main a:hover {
+    text-decoration: none;
+    color: #fdcb6e;
+    transition: 0.15s;
+}
+
+.layout_header_menu {
+    margin: 0 auto;
+}
+
+.layout_body {
+    text-align: center;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://media.metrip.vn/images/cidre-3-2048-1459002815059-234-0-1136-2048-crop-1459002866249.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+.layout_content {
+    padding: 5px;
+    width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 185px;
+    background-color: #1a2025;
+    overflow: hidden;
+}

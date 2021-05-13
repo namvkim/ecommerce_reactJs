@@ -1,127 +1,92 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: none;
-    font-family: 'Lato', sans-serif, Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    color: white;
-}
-
-html {
-    background-color: white;
-    text-rendering: optimizeLegibility;
-}
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.body {
-    text-align: center;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://media.metrip.vn/images/cidre-3-2048-1459002815059-234-0-1136-2048-crop-1459002866249.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: fixed;
-}
-
-.content {
-    width: 1000px;
-    min-height: 100vh;
-    margin: 0 auto;
-    background-color: #2c3e50;
-    padding: 50px;
-}
-
-.content_table {
+.order_content_table {
     background-color: rgb(59, 50, 50);
+    color: white;
+    margin: 40px 40px 5px 40px;
 }
 
-.title {
+.order_title {
     display: flex;
-    margin-top: 190px;
     font-size: 25px;
     padding: 10px 0;
     background-color: rgb(17, 0, 255);
 }
 
-.title_item1 {
+.order_title_item1 {
     margin-left: 50px;
     width: 575px;
     text-align: start;
 }
 
-.title_item2 {
+.order_title_item2 {
     width: 135px;
     text-align: start;
 }
 
-.main {
+.order_main {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
 }
 
-.main_item1 {
+.order_main_item1 {
     display: flex;
     align-items: center;
 }
 
-.main_item_img {
+.order_main_item_img {
     width: 120px;
     margin-left: 30px;
 }
 
-.main_item_img img {
+.order_main_item_img img {
     height: 50px;
 }
 
-.main_item_name {
+.order_main_item_name {
     font-size: 18px;
 }
 
-.main_item2 {
+.order_main_item2 {
     display: flex;
     align-items: center;
 }
 
-.main_item_quantity {
+.order_main_item_quantity {
     display: flex;
     align-items: baseline;
 }
 
-.main_item_price {
+.order_main_item_price {
     width: 210px;
     text-align: end;
     padding-right: 30px;
 }
 
-.total_title {
+.order_total_title {
     font-weight: bold;
     font-size: 20px;
     margin: 15px 50px;
 }
 
-.total_price {
+.order_total_price {
     font-weight: bold;
     font-size: 20px;
     margin: 15px 30px;
 }
 
-.btn {
+.order_btn {
     display: block;
     text-align: end;
+    margin: 0px 40px;
 }
 
-.cart {
+.order_cart {
     padding: 10px 40px;
     font-weight: bold;
     background-color: chocolate;
 }
 
-.oke {
+.order_oke {
     padding: 10px 40px;
     font-weight: bold;
     background-color: greenyellow;

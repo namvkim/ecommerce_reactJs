@@ -298,7 +298,7 @@
     font-size: 0.875rem;
     color: #343642;
 }
-
+/* 
 .form .error-message {
     display: inline-block;
     position: absolute;
@@ -311,7 +311,7 @@
     font-size: 13px;
     font-size: 0.8125rem;
     border-radius: 0.25em;
-    /* prevent click and touch events */
+
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
@@ -321,7 +321,6 @@
 }
 
 .form .error-message::after {
-    /* triangle */
     content: '';
     position: absolute;
     left: 22px;
@@ -339,7 +338,7 @@
     -webkit-transition: opacity 0.2s 0, visibility 0 0;
     -moz-transition: opacity 0.2s 0, visibility 0 0;
     transition: opacity 0.2s 0, visibility 0 0;
-}
+} */
 
 @media only screen and (min-width: 600px) {
     .form {

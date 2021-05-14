@@ -31,6 +31,14 @@
       "email": "sonnamttt@gmail.com",
       "address": "Vĩnh Kim-Vĩnh Linh-Quảng Trị",
       "status": 1
+    },{
+      "id": 2,
+      "name": "xanh",
+      "pass": "1234",
+      "phone": "0351121563",
+      "email": "xanh@gmail.com",
+      "address": "Binh Dinh",
+      "status": 0
     }
   ],
   "orders": [

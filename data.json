@@ -1,18 +1,54 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Món ngon nhất Việt Nam",
-      "price": 20,
+      "name": "cdsff",
+      "pic": "https://shop.photozone.com.vn/wp-content/uploads/2016/08/cac-tan-dung-anh-sang-trong-chup-anh_photoZone-com-vn-5.jpg",
+      "price": "411",
       "describes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum veritatis at ipsum doloremque quia quasi nostrum quo autem iste. Ex deleniti in repudiandae delectus! Ratione vitae quo voluptas explicabo unde officia porro tenetur maxime earum doloribus, excepturi odit vel, blanditiis dignissimos, fugiat ipsa cum numquam reprehenderit voluptatum! Deleniti numquam consequuntur dolorum vel quae doloremque consectetur odio impedit natus ipsam. Ut doloremque, autem architecto ea, in esse commodi eaque voluptas rerum temporibus, distinctio quam pariatur quidem tempore ab soluta inventore laboriosam similique quibusdam delectus veniam accusamus odit. Voluptatibus praesentium deserunt culpa. Cumque ad dicta, dolorum laudantium quisquam rem porro numquam obcaecati nobis, quae esse libero, unde possimus. Odio nisi placeat cum at quos. Accusamus dolorum itaque, beatae et provident quis soluta esse veniam ipsam. Architecto expedita aperiam fuga dicta ea quam unde accusantium voluptatem rerum? Deleniti, tempore officia harum itaque tempora aut, optio ab voluptatum autem odit sapiente iste exercitationem mollitia velit minima aperiam! Esse totam excepturi maiores ducimus laborum impedit repellendus maxime reiciendis eum rem. Labore, culpa maiores, quaerat doloremque aut totam praesentium temporibus officia nihil quas dolorum voluptates nam quod cupiditate tempore reiciendis tenetur adipisci blanditiis ab? Amet, debitis fuga. Alias ullam deleniti nam fugit quaerat magnam provident expedita.",
-      "category": 1,
-      "status": 1
+      "category": "2",
+      "id": 1
     },
     {
-      "title": "1232",
-      "img": "",
-      "price": "",
+      "name": "Ho Thi Da Ni",
+      "pic": "https://shop.photozone.com.vn/wp-content/uploads/2016/08/cac-tan-dung-anh-sang-trong-chup-anh_photoZone-com-vn-5.jpg",
+      "price": "200000",
+      "describes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum veritatis at ipsum doloremque quia quasi nostrum quo autem iste. Ex deleniti in repudiandae delectus! Ratione vitae quo voluptas explicabo unde officia porro tenetur maxime earum doloribus, excepturi odit vel, blanditiis dignissimos, fugiat ipsa cum numquam reprehenderit voluptatum! Deleniti numquam consequuntur dolorum vel quae doloremque consectetur odio impedit natus ipsam. Ut doloremque, autem architecto ea, in esse commodi eaque voluptas rerum temporibus, distinctio quam pariatur quidem tempore ab soluta inventore laboriosam similique quibusdam delectus veniam accusamus odit. Voluptatibus praesentium deserunt culpa. Cumque ad dicta, dolorum laudantium quisquam rem porro numquam obcaecati nobis, quae esse libero, unde possimus. Odio nisi placeat cum at quos. Accusamus dolorum itaque, beatae et provident quis soluta esse veniam ipsam. Architecto expedita aperiam fuga dicta ea quam unde accusantium voluptatem rerum? Deleniti, tempore officia harum itaque tempora aut, optio ab voluptatum autem odit sapiente iste exercitationem mollitia velit minima aperiam! Esse totam excepturi maiores ducimus laborum impedit repellendus maxime reiciendis eum rem. Labore, culpa maiores, quaerat doloremque aut totam praesentium temporibus officia nihil quas dolorum voluptates nam quod cupiditate tempore reiciendis tenetur adipisci blanditiis ab? Amet, debitis fuga. Alias ullam deleniti nam fugit quaerat magnam provident expedita.",
+      "category": "2",
       "id": 2
+    },
+    {
+      "name": "sang sang 333",
+      "pic": "https://shop.photozone.com.vn/wp-content/uploads/2016/08/cac-tan-dung-anh-sang-trong-chup-anh_photoZone-com-vn-5.jpg",
+      "price": "3333",
+      "describes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum veritatis at ipsum doloremque quia quasi nostrum quo autem iste. Ex deleniti in repudiandae delectus! Ratione vitae quo voluptas explicabo unde officia porro tenetur maxime earum doloribus, excepturi odit vel, blanditiis dignissimos, fugiat ipsa cum numquam reprehenderit voluptatum! Deleniti numquam consequuntur dolorum vel quae doloremque consectetur odio impedit natus ipsam. Ut doloremque, autem architecto ea, in esse commodi eaque voluptas rerum temporibus, distinctio quam pariatur quidem tempore ab soluta inventore laboriosam similique quibusdam delectus veniam accusamus odit. Voluptatibus praesentium deserunt culpa. Cumque ad dicta, dolorum laudantium quisquam rem porro numquam obcaecati nobis, quae esse libero, unde possimus. Odio nisi placeat cum at quos. Accusamus dolorum itaque, beatae et provident quis soluta esse veniam ipsam. Architecto expedita aperiam fuga dicta ea quam unde accusantium voluptatem rerum? Deleniti, tempore officia harum itaque tempora aut, optio ab voluptatum autem odit sapiente iste exercitationem mollitia velit minima aperiam! Esse totam excepturi maiores ducimus laborum impedit repellendus maxime reiciendis eum rem. Labore, culpa maiores, quaerat doloremque aut totam praesentium temporibus officia nihil quas dolorum voluptates nam quod cupiditate tempore reiciendis tenetur adipisci blanditiis ab? Amet, debitis fuga. Alias ullam deleniti nam fugit quaerat magnam provident expedita.",
+      "category": 1,
+      "id": 3
+    },
+    {
+      "name": "Mó",
+      "pic": "https://shop.photozone.com.vn/wp-content/uploads/2016/08/cac-tan-dung-anh-sang-trong-chup-anh_photoZone-com-vn-5.jpg",
+      "price": "22222",
+      "describes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum veritatis at ipsum doloremque quia quasi nostrum quo autem iste. Ex deleniti in repudiandae delectus! Ratione vitae quo voluptas explicabo unde officia porro tenetur maxime earum doloribus, excepturi odit vel, blanditiis dignissimos, fugiat ipsa cum numquam reprehenderit voluptatum! Deleniti numquam consequuntur dolorum vel quae doloremque consectetur odio impedit natus ipsam. Ut doloremque, autem architecto ea, in esse commodi eaque voluptas rerum temporibus, distinctio quam pariatur quidem tempore ab soluta inventore laboriosam similique quibusdam delectus veniam accusamus odit. Voluptatibus praesentium deserunt culpa. Cumque ad dicta, dolorum laudantium quisquam rem porro numquam obcaecati nobis, quae esse libero, unde possimus. Odio nisi placeat cum at quos. Accusamus dolorum itaque, beatae et provident quis soluta esse veniam ipsam. Architecto expedita aperiam fuga dicta ea quam unde accusantium voluptatem rerum? Deleniti, tempore officia harum itaque tempora aut, optio ab voluptatum autem odit sapiente iste exercitationem mollitia velit minima aperiam! Esse totam excepturi maiores ducimus laborum impedit repellendus maxime reiciendis eum rem. Labore, culpa maiores, quaerat doloremque aut totam praesentium temporibus officia nihil quas dolorum voluptates nam quod cupiditate tempore reiciendis tenetur adipisci blanditiis ab? Amet, debitis fuga. Alias ullam deleniti nam fugit quaerat magnam provident expedita.",
+      "category": 1,
+      "id": 4
+    },
+    {
+      "id": 25,
+      "name": "Ho Thi Khua",
+      "pic": "/images/Thumbs.db",
+      "price": "3432",
+      "describes": "ngon",
+      "category": "category2",
+      "status": "1"
+    },
+    {
+      "id": 28,
+      "name": "DA Ni",
+      "pic": "/images/mayanh1.jpg",
+      "price": "10888",
+      "describes": "restser",
+      "category": "2",
+      "status": "1"
     }
   ],
   "picture": [

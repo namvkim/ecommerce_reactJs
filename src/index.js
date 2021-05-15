@@ -5,12 +5,12 @@ import App from './App';
 
 // --------------------router-------------------------
 
-// ReactDOM.render(
-// <React.StrictMode>
-//     <App />
-// </React.StrictMode>,
-//   document.getElementById('root')
-// );
+ReactDOM.render(
+<React.StrictMode>
+    <App />
+</React.StrictMode>,
+  document.getElementById('root')
+);
 
 
 
@@ -30,4 +30,10 @@ ReactDOM.render(
 </React.StrictMode>,
   document.getElementById('root')
 );
+// ReactDOM.render(
+// <React.StrictMode>
+// <Login/>
+// </React.StrictMode>,
+//   document.getElementById('root')
+// );
 

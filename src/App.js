@@ -6,9 +6,9 @@ import AppAdmin from './component/Admin/AppAdmin.js';
 class App extends Component {
     render() {
         return (
-            <dic>
+            <div>
                 <AppAdmin/>
-            </dic>
+            </div>
         );
 
     }

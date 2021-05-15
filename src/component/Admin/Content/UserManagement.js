@@ -81,7 +81,10 @@ class UserManagement extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="content">
+              <div className="layout_body"> 
+
+             
+                <div className=" content">
                 
                                 <table  className="border col-sm-12 p-2 m-2">
                                 <tr className="border">
@@ -112,6 +115,7 @@ class UserManagement extends Component {
                                   
                                    );})}
                                  </table>
+                </div>
                 </div>
             </React.Fragment>
         );

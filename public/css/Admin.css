@@ -1,10 +1,10 @@
 
 
 .book_content_a {
-    width: 200px;
+    width: 250px;
     min-height: 100vh;
     background-color: white;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     padding-top: 20px;
     outline: none;
 
@@ -14,11 +14,19 @@
     color:black;
 }
 .book_content_b {
-    width: 100vh;
+    width: 200vh;
     min-height: 80vh;
-    margin-top: 20px;
+    /* //margin-top: 20px; */
     background-color:  #2c3e50;
-    padding: 50px;
+    padding-top: 20px;
+    color:black;
+
+}
+.book_class_text_padding{
+    padding-top: 15px;
+}
+.book_class_icon_padding{
+    padding-right: 15px;
 }
 
 .book_layout_header_main {
@@ -97,6 +105,13 @@ th,td{
   /* Hide scrollbar for Chrome, Safari and Opera */
   .example::-webkit-scrollbar {
       display: none;
+  }
+
+  .ex {
+    /* background-color: lightblue; */
+    width: 200px;
+    height: 100px;
+    overflow: auto;
   }
   
 

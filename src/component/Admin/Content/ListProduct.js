@@ -97,7 +97,7 @@ onChange = (event) =>{
 
   if(type==="file")
   {
-      value=this.pic.value.replace( /C:\\fakepath\\/i,"/images/");
+      value = this.pic.value.replace( /C:\\fakepath\\/i,"/images/");
   }
   this.setState(
     {
@@ -135,11 +135,11 @@ onChange = (event) =>{
   }
   
 
-  getData=()=>{
+  getData=(id)=>{
     axios({
       method: 'GET',
       url: 'http://localhost:3000/products',
-      data: null
+      data: {id:id+1}
     }).then( res =>{
       this.setState({products: res.data});
     }).catch(err=>{});
@@ -171,20 +171,20 @@ onChange = (event) =>{
        category:item.category,
        describes:item.describes,
       
-       id:id+1
+       id:id
        //loi
        
      }
      
      );
-      alert(id);
+      // alert("heloo 1");
    }
    
    updateItem = ()=>{
      let data = this.state.products;
      data.map((item,id)=>{
                if(this.state.id===id){
-                 alert("hello" +id);
+                //  alert("hello2  " +id);
                  item.name = this.state.name;
                  item.pic = this.state.pic;
                  //this.state.index=this.state.index+1;
@@ -236,6 +236,82 @@ onChange = (event) =>{
 
 
 
+  // Edit = (item,id)=>{
+  //   const product = this.setState({
+  //      action:'UPDATE',
+  //      name:item.name,
+  //      pic:item.pic,
+  //      price:item.price,
+  //      category:item.category,
+  //      describes:item.describes,
+      
+  //      id:id
+  //      //loi
+       
+  //    }
+     
+  //    );
+  //     alert("heloo 1");
+  //  }
+   
+  //  updateItem = ()=>{
+  //    let data = this.state.products;
+  //    data.map((item,id)=>{
+  //              if(this.state.id===id){
+  //                alert("hello2  " +id);
+  //                item.name = this.state.name;
+  //                item.pic = this.state.pic;
+  //                //this.state.index=this.state.index+1;
+  //                item.price = parseInt(this.state.price);
+  //                item.category = this.state.category
+  //                alert("Sửa thành công!");
+  //                axios({
+  //                  method: 'PUT',
+  //                  url:`http://localhost:3000/products/${id}`,
+  //                  data:{
+  //                    name:this.state.name,
+  //                    pic:this.state.pic,
+  //                    price:this.state.price,
+  //                    describes:this.state.describes,
+  //                    category:this.state.category
+  //                  }
+  //              }).then (res =>{
+                 
+  //                this.setState({
+  //                 products:data,
+  //                  name:"",
+  //                     pic:"",
+  //                     price:"",
+  //                     describes:"",
+  //                     category:"",
+  //                  action:'ADD'
+  //               })
+  //                  res.data = this.state.products;
+                   
+  //              }).catch(err =>{
+           
+  //              })
+  //              }
+  //          }
+  //      )
+  //    //set update items
+  //    this.setState({
+  //       products:data,
+  //       name:"",
+  //          pic:"",
+  //          price:"",
+  //          category:"",
+  //          describes:"",
+  //       action:'ADD'
+  //    })
+      
+  //  }
+
+
+
+
+
+
 
   render() {
     return(
@@ -253,7 +329,7 @@ onChange = (event) =>{
 									<input type="number" name="price" placeholder="Giá" value={this.state.price} onChange={this.onChange} required="" />
 								</div>
                 <div class="form-sub-w3">
-									<input type="file" name="pic" ref={(input) =>{this.pic = input}} placeholder="" value={this.state.img} onChange={this.onChange}  required="" />
+									<input type="file" name="pic" ref={(input) =>{this.pic = input}} placeholder=""   onChange={this.onChange}  required="" />
 								</div>
                 <div class="form-sub-w3 class_pro_radio" >
 
@@ -306,7 +382,7 @@ onChange = (event) =>{
                         return (
                             
                                 <tr>
-                                    <td>{pro.id}</td>
+                                    <td>{pro.id+1}</td>
                                     <td>{pro.name}</td>
                                     <td>{pro.price}</td>
                                     <td>
@@ -314,7 +390,11 @@ onChange = (event) =>{
                                     </td>
                                     <td>{pro.category}</td>
                                     {/* <td>{pro.status==(!0)?"Còn":"Hết"}</td> */}
-                                    <td>{pro.describess}</td>
+                                    <td>
+                                      <p className="ex">
+                                      {/* {pro.describes} */}
+                                      </p>
+                                    </td>
                                     <td > 
                                     <a onClick={()=>this.Edit(pro,index)}> <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_settings_48px-512.png"width="35px" height="35px" /></a>
                                     <a onClick={()=>this.deleteData(pro.id)}> <img src="https://cdn0.iconfinder.com/data/icons/simpline-mix/64/simpline_36-512.png"width="35px" height="35px" /></a>

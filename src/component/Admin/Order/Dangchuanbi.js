@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class Danggiao extends Component {
+class Dangchuanbi extends Component {
   
 
     componentWillMount() {
@@ -35,7 +35,7 @@ class Danggiao extends Component {
     render() {
         return (
             <div>
-                <h2>Dang  giao</h2>
+                <h2>Dangchuanbi</h2>
             </div>
         );
     }
@@ -43,4 +43,4 @@ class Danggiao extends Component {
 
 
 
-export default Danggiao;
+export default Dangchuanbi;

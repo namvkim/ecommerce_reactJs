@@ -54,7 +54,7 @@ class HomeAdmin extends Component {
                     <img src={a.pic} alt="" width="80%" />
                 </div>
                 <div style={{color: 'red'}}>{a.price} VND</div>
-                <div style={{ fontSize:'10px'}} className="home_color">{a.status==(!0)?"Còn hàng":"Hết hàng"}</div>
+                {/* <div style={{ fontSize:'10px'}} className="home_color">{a.status==(!0)?"Còn hàng":"Hết hàng"}</div> */}
                
                           
             </div>

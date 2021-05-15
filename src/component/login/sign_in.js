@@ -24,19 +24,23 @@ class Sign_in extends Component {
       });
   }
 
-  componentDidMount() {}
+  componentDidMount(){
+    this.callAPI(this.url_users, "GET", "");
+  }
+
   sign_in = () => {
     let email = document.getElementById("signin-email").value;
     let pass = document.getElementById("signin-password").value;
-    this.callAPI(this.url_users, "GET", "");
     const result = this.state.result.find(
       (row) => row.email === email && row.pass === pass
     );
-    console.log(result);
     if (result != null) {
       if (result.status === 0) {
         alert("your account has been locked ^.^");
-      } else localStorage.setItem("user", JSON.stringify(result));
+      } else {
+        localStorage.setItem("user", JSON.stringify(result))
+        window.location.reload();
+    };
     } else alert("Incorrect account or password !!");
   };
 
@@ -54,9 +58,6 @@ class Sign_in extends Component {
               type="email"
               placeholder="E-mail"
             />
-            {/* <span className="error-message">
-                    An account with this email address does not exist!
-                  </span> */}
           </p>
           <p className="fieldset">
             <label className="image-replace password" htmlFor="signin-password">
@@ -71,9 +72,6 @@ class Sign_in extends Component {
             <a href="#0" className="hide-password">
               Show
             </a>
-            {/* <span className="error-message">
-                    Wrong password! Try again.
-                  </span> */}
           </p>
           <p className="fieldset">
             <input type="checkbox" id="remember-me" defaultChecked />

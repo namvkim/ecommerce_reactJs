@@ -4,10 +4,32 @@ import Sign_up from "./sign_up";
 import Reset from "./reset";
 
 class Login_main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user:{}
+    };
+  }
+
+  componentDidMount(){
+    this.state.user=JSON.parse(localStorage.getItem("user"));
+    if (this.state.user!=null) {
+      document.getElementById('log_out').style.display='block';
+      document.getElementById('log_in').style.display='none';
+    }else{
+      document.getElementById('log_out').style.display='none';
+      document.getElementById('log_in').style.display='block';
+    }
+  }
+
   render() {
     return (
       <div>
-        <nav className="main-nav ">
+        <div id="log_out"  style={{display: 'none'}}>
+          <h2>sonnam</h2>
+          <button>LogOut</button>
+        </div>
+        <nav className="main-nav " id="log_in">
           <ul>
             <li>
               <a className="signin" href="#0">
@@ -21,6 +43,7 @@ class Login_main extends Component {
             </li>
           </ul>
         </nav>
+    
         <div className="user-modal">
           <div className="user-modal-container">
             <ul className="switcher">
@@ -34,9 +57,9 @@ class Login_main extends Component {
             <Sign_in />
             <Sign_up />
             <Reset />
-            <a href="#0" className="close-form">
+            {/* <a href="#0" className="close-form">
               Close
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

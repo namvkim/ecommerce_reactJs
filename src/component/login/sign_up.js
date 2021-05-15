@@ -36,19 +36,25 @@ class Sign_up extends Component {
     this.setState({[key]: value});
   }
 
-  sign_up = () => {
-    let email = document.getElementById("signin-email").value;
-    let pass = document.getElementById("signin-password").value;
+  componentDidMount(){
     this.callAPI(this.url_users, "GET", "");
+  }
+
+  sign_up = () => {
     const result = this.state.result.find(
-      (row) => row.email === email && row.pass === pass
+      (row) => row.email === this.state.email
     );
-    console.log(result);
-    if (result != null) {
-      if (result.status === 0) {
-        alert("your account has been locked ^.^");
-      } else localStorage.setItem("user", JSON.stringify(result));
-    } else alert("Incorrect account or password !!");
+    if (result == null) {
+      let data = {
+        name: this.state.name,
+        pass: this.state.pass,
+        phone: this.state.phone,
+        email: this.state.email,
+        address: this.state.address,
+        status: 1,
+      }
+      this.callAPI(this.url_users, "POST", data);
+    } else alert("Account already exists !!");
   };
 
   render() {
@@ -67,10 +73,6 @@ class Sign_up extends Component {
               name="name"
               onChange={this.onChange}
             />
-            {/* <span className="error-message">
-              Your username can only contain numeric and alphabetic
-              symbols!
-            </span> */}
           </p>
           <p className="fieldset">
             <label className="image-replace email" htmlFor="signup-email">
@@ -84,9 +86,6 @@ class Sign_up extends Component {
               name="email"
               onChange={this.onChange}
             />
-            {/* <span className="error-message">
-              Enter a valid email address!
-            </span> */}
           </p>
           <p className="fieldset">
             <label className="image-replace password" htmlFor="signup-password">
@@ -103,9 +102,6 @@ class Sign_up extends Component {
             <a href="#0" className="hide-password">
               Show
             </a>
-            {/* <span className="error-message">
-              Your password has to be at least 6 characters long!
-            </span> */}
           </p>
           <p className="fieldset">
             <label className="image-replace phone" htmlFor="signup-phone">
@@ -119,7 +115,6 @@ class Sign_up extends Component {
               name="phone"
               onChange={this.onChange}
             />
-            {/* <span class="error-message">Your password has to be at least 6 characters long!</span> */}
           </p>
           <p className="fieldset">
             <label className="image-replace Address" htmlFor="signup-Address">
@@ -133,18 +128,16 @@ class Sign_up extends Component {
               name="address"
               onChange={this.onChange}
             />
-            {/* <span class="error-message">Your password has to be at least 6 characters long!</span> */}
           </p>
           <p className="fieldset">
             <input
               className="full-width has-padding"
               type="submit"
               defaultValue="Create account"
-              onClick={()=>this.Sign_up()}
+              onClick={()=>this.sign_up()}
             />
           </p>
         </form>
-        {/* <a href="#0" class="cd-close-form">Close</a> */}
       </div>
     );
   }

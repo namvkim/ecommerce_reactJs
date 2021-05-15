@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
+import Allproduct from './AllProduct.js';
+import Login_main from './component/login/login_main';
 
 // --------------------router-------------------------
 
@@ -32,8 +33,14 @@ ReactDOM.render(
 );
 // ReactDOM.render(
 // <React.StrictMode>
-// <Login/>
+// <Login_main/>
 // </React.StrictMode>,
 //   document.getElementById('root')
 // );
 
+// ReactDOM.render(
+//   <React.StrictMode>
+// <Login_main/>
+// </React.StrictMode>,
+//   document.getElementById('root')
+// );

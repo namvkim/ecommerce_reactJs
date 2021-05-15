@@ -6,7 +6,7 @@ import AppAdmin from './component/Admin/AppAdmin.js';
 import routes from './routes.js';
 import Header from './component/Header.js';
 import Content from './component/Content.js';
-import AnhMenu from './component/AnhMenu.js';
+import AnhMenu from './component/home/AnhMenu.js';
 
 class App extends Component {
     render() {

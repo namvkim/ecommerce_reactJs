@@ -6,12 +6,12 @@ import Login from './component/login/login';
 
 // --------------------router-------------------------
 
-// ReactDOM.render(
-// <React.StrictMode>
-//     <App />
-// </React.StrictMode>,
-//   document.getElementById('root')
-// );
+ReactDOM.render(
+<React.StrictMode>
+    <App />
+</React.StrictMode>,
+  document.getElementById('root')
+);
 
 
 
@@ -25,10 +25,10 @@ import Login from './component/login/login';
 
 
 // -----------------------------------Login----------------
-ReactDOM.render(
-<React.StrictMode>
-<Login/>
-</React.StrictMode>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+// <React.StrictMode>
+// <Login/>
+// </React.StrictMode>,
+//   document.getElementById('root')
+// );
 

@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+// import Header from '../../ecomerce_reactJS_Project/src/compenent/Header.js';
 import routes from './routes.js';
+import Header from './component/Header.js';
+import Content from './component/Content.js';
+import AnhMenu from './component/AnhMenu.js';
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <ul>
+                <Header />
+                {/* <AnhMenu /> */}
+                <Content />
+                {/* <ul>
                     <li><Link to="/">Main</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/add">Add</Link></li>
-                </ul>
+                </ul> */}
                 <Switch>
                     {this.showContentMenu(routes)}
                 </Switch>

@@ -52,7 +52,7 @@ class Home_header extends Component {
           <ul className="layout_header_menu">
             <a href="#">HOME PAGE</a>
             <a href="#">HISTORY</a>
-            <a href="#">BOOK</a>
+            <a href="#">CART</a>
             <a href="#">RECRUITMENT</a>
             <a href="#">CONTACT</a>
             <a href="#">

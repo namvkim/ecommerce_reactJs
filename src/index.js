@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Allproduct from './AllProduct.js';
-import Login_main from './component/login/login_main';
+// import Allproduct from './AllProduct.js';
+// import Login_main from './component/login/login_main';
 import Home_main from './component/home/home_main';
 
 // --------------------router-------------------------

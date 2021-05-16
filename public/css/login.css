@@ -8,8 +8,6 @@
 
 .main-nav {
     cursor: pointer;
-    position: absolute;
-    right: 0;
 }
 
 .main-nav ul {
@@ -298,47 +296,6 @@
     font-size: 0.875rem;
     color: #343642;
 }
-/* 
-.form .error-message {
-    display: inline-block;
-    position: absolute;
-    left: -5px;
-    bottom: -35px;
-    background: rgba(215, 102, 102, 0.9);
-    padding: .8em;
-    z-index: 2;
-    color: #FFF;
-    font-size: 13px;
-    font-size: 0.8125rem;
-    border-radius: 0.25em;
-
-    pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s 0, visibility 0 0.2s;
-    -moz-transition: opacity 0.2s 0, visibility 0 0.2s;
-    transition: opacity 0.2s 0, visibility 0 0.2s;
-}
-
-.form .error-message::after {
-    content: '';
-    position: absolute;
-    left: 22px;
-    bottom: 100%;
-    height: 0;
-    width: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid rgba(215, 102, 102, 0.9);
-}
-
-.form .error-message.is-visible {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: opacity 0.2s 0, visibility 0 0;
-    -moz-transition: opacity 0.2s 0, visibility 0 0;
-    transition: opacity 0.2s 0, visibility 0 0;
-} */
 
 @media only screen and (min-width: 600px) {
     .form {
@@ -480,4 +437,24 @@
 
 .switcher {
     padding-left: 0;
+}
+
+.log_out_name{
+    color: white;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.log_out_btn{
+    margin-right: 20px;
+    background-image: linear-gradient( #302719, black);
+    border: 2px solid #9e2c2c;
+    color: white;
+    padding: 0 15px;
+    border-radius: 15px;
+}
+
+.log_out_btn:hover{
+    background: #b13131;
+    border: 2px solid #b13131;
 }

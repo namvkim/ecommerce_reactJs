@@ -22,14 +22,18 @@ class Login_main extends Component {
     }
   }
 
+  logOut=()=>{
+    localStorage.removeItem('user');
+  }
+
   render() {
     return (
       <div>
         <div id="log_out"  style={{display: 'none'}}>
-          <h2>sonnam</h2>
-          <button>LogOut</button>
+          <span className="log_out_name" id="log_out_name">{this.state.user!=null?this.state.user.name:''}</span>
+          <button className="log_out_btn" onClick={()=>this.logOut()}>LogOut</button>
         </div>
-        <nav className="main-nav " id="log_in">
+        <nav className="main-nav" id="log_in">
           <ul>
             <li>
               <a className="signin" href="#0">

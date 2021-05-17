@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <style>
+      .a {
+  display: flex; /* the default for span */
+ margin: 10px;
+  padding: 5px;
+}
+.modal_detail{
+    margin: 10px;
+  padding: 5px;
+}
+.modal_detail_center{
+    text-align: center;
+}
+.example_detail {
+    width: 400px;
+    height: 250px;
+    overflow-y: scroll; 
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .example_detail::-webkit-scrollbar {
+      display: none;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Detail
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+            <div class="modal-body a">         
+            <div class="modal_detail">            
+                <p><img src="https://image-us.eva.vn/upload/3-2020/images/2020-07-14/cach-lam-ca-kho-to-ngon-dung-dieu-chuan-vi-nam-bo-ca-kho-to-1-1594691698-779-width600height337.jpg" width="200" height="200"/></p>
+                <p class="modal_detail_center">20 VDN</p>
+            </div>          
+            <div class="modal_detail example_detail">Mô tả Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum veritatis at ipsum doloremque quia quasi nostrum quo autem iste. Ex deleniti in repudiandae delectus! Ratione vitae quo voluptas explicabo unde officia porro tenetur maxime earum doloribus, excepturi odit vel, blanditiis dignissimos, fugiat ipsa cum numquam reprehenderit voluptatum! Deleniti numquam consequuntur dolorum vel quae doloremque consectetur odio impedit natus ipsam. Ut doloremque, autem architecto ea, in esse commodi eaque voluptas rerum temporibus, distinctio quam pariatur quidem tempore ab soluta inventore laboriosam similique quibusdam delectus veniam accusamus odit. Voluptatibus praesentium deserunt culpa. Cumque ad dicta, dolorum laudantium quisquam rem porro numquam obcaecati nobis, quae esse libero, unde possimus. Odio nisi placeat cum at quos. Accusamus dolorum itaque, beatae et provident quis soluta esse veniam ipsam. Architecto expedita aperiam fuga dicta ea quam unde accusantium voluptatem rerum? Deleniti, tempore officia harum itaque tempora aut, optio ab voluptatum autem odit sapiente iste exercitationem mollitia velit minima aperiam! Esse totam excepturi maiores ducimus laborum impedit repellendus maxime reiciendis eum rem. Labore, culpa maiores, quaerat doloremque aut totam praesentium temporibus officia nihil quas dolorum voluptates nam quod cupiditate tempore reiciendis tenetur adipisci blanditiis ab? Amet, debitis fuga. Alias ullam deleniti nam fugit quaerat magnam provident expedita</div>
+            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

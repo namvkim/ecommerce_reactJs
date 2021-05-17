@@ -156,3 +156,42 @@
     background-color: #009432;
     margin: 10px;
 }
+
+
+.a {
+    display: flex; /* the default for span */
+   margin: 10px;
+    padding: 5px;
+  }
+  .modal_detail{
+      margin: 10px;
+    padding: 5px;
+  }
+  .modal_detail_center{
+      text-align: center;
+  }
+  .example_detail {
+      width: 800px;
+      height: 250px;
+      overflow-y: scroll; 
+    }
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .example_detail::-webkit-scrollbar {
+        display: none;
+    }
+
+    .modal-content-detail {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color:rgb(243, 239, 233);
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: .3rem;
+        outline: 0;
+    }

@@ -1,45 +1,28 @@
 {
   "products": [
     {
-      "name": "Bánh canh",
-      "pic": "https://lh3.googleusercontent.com/proxy/cab23hcxGe-f32J_84xyxg97c5YCf86YWzbh5eRUEmZdidvCdS65O1NxtKz2Tli2vmv7mNTpX3jwVdbrtZydp710vTRAwCPfc7XWJAS47qjMXjQqAR0-F6hrtlACSCI",
-      "price": "25",
-      "describes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum veritatis at ipsum doloremque quia quasi nostrum quo autem iste. Ex deleniti in repudiandae delectus! Ratione vitae quo voluptas explicabo unde officia porro tenetur maxime earum doloribus, excepturi odit vel, blanditiis dignissimos, fugiat ipsa cum numquam reprehenderit voluptatum! Deleniti numquam consequuntur dolorum vel quae doloremque consectetur odio impedit natus ipsam. Ut doloremque, autem architecto ea, in esse commodi eaque voluptas rerum temporibus, distinctio quam pariatur quidem tempore ab soluta inventore laboriosam similique quibusdam delectus veniam accusamus odit. Voluptatibus praesentium deserunt culpa. Cumque ad dicta, dolorum laudantium quisquam rem porro numquam obcaecati nobis, quae esse libero, unde possimus. Odio nisi placeat cum at quos. Accusamus dolorum itaque, beatae et provident quis soluta esse veniam ipsam. Architecto expedita aperiam fuga dicta ea quam unde accusantium voluptatem rerum? Deleniti, tempore officia harum itaque tempora aut, optio ab voluptatum autem odit sapiente iste exercitationem mollitia velit minima aperiam! Esse totam excepturi maiores ducimus laborum impedit repellendus maxime reiciendis eum rem. Labore, culpa maiores, quaerat doloremque aut totam praesentium temporibus officia nihil quas dolorum voluptates nam quod cupiditate tempore reiciendis tenetur adipisci blanditiis ab? Amet, debitis fuga. Alias ullam deleniti nam fugit quaerat magnam provident expedita.",
-      "category": "2",
-      "id": 1
-    },
-    {
-      "name": "Mực ống",
-      "pic": "https://shop.photozone.com.vn/wp-content/uploads/2016/08/cac-tan-dung-anh-sang-trong-chup-anh_photoZone-com-vn-5.jpg",
-      "price": "30",
-      "describes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum veritatis at ipsum doloremque quia quasi nostrum quo autem iste. Ex deleniti in repudiandae delectus! Ratione vitae quo voluptas explicabo unde officia porro tenetur maxime earum doloribus, excepturi odit vel, blanditiis dignissimos, fugiat ipsa cum numquam reprehenderit voluptatum! Deleniti numquam consequuntur dolorum vel quae doloremque consectetur odio impedit natus ipsam. Ut doloremque, autem architecto ea, in esse commodi eaque voluptas rerum temporibus, distinctio quam pariatur quidem tempore ab soluta inventore laboriosam similique quibusdam delectus veniam accusamus odit. Voluptatibus praesentium deserunt culpa. Cumque ad dicta, dolorum laudantium quisquam rem porro numquam obcaecati nobis, quae esse libero, unde possimus. Odio nisi placeat cum at quos. Accusamus dolorum itaque, beatae et provident quis soluta esse veniam ipsam. Architecto expedita aperiam fuga dicta ea quam unde accusantium voluptatem rerum? Deleniti, tempore officia harum itaque tempora aut, optio ab voluptatum autem odit sapiente iste exercitationem mollitia velit minima aperiam! Esse totam excepturi maiores ducimus laborum impedit repellendus maxime reiciendis eum rem. Labore, culpa maiores, quaerat doloremque aut totam praesentium temporibus officia nihil quas dolorum voluptates nam quod cupiditate tempore reiciendis tenetur adipisci blanditiis ab? Amet, debitis fuga. Alias ullam deleniti nam fugit quaerat magnam provident expedita.",
-      "category": 1,
+      "name": "Ca luong",
+      "pic": "/images/lobster.png",
+      "price": "10",
+      "describes": "ngon",
+      "category": "1",
       "id": 2
     },
     {
-      "name": "Chân gà",
-      "pic": "https://shop.photozone.com.vn/wp-content/uploads/2016/08/cac-tan-dung-anh-sang-trong-chup-anh_photoZone-com-vn-5.jpg",
-      "price": "50",
-      "describes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum veritatis at ipsum doloremque quia quasi nostrum quo autem iste. Ex deleniti in repudiandae delectus! Ratione vitae quo voluptas explicabo unde officia porro tenetur maxime earum doloribus, excepturi odit vel, blanditiis dignissimos, fugiat ipsa cum numquam reprehenderit voluptatum! Deleniti numquam consequuntur dolorum vel quae doloremque consectetur odio impedit natus ipsam. Ut doloremque, autem architecto ea, in esse commodi eaque voluptas rerum temporibus, distinctio quam pariatur quidem tempore ab soluta inventore laboriosam similique quibusdam delectus veniam accusamus odit. Voluptatibus praesentium deserunt culpa. Cumque ad dicta, dolorum laudantium quisquam rem porro numquam obcaecati nobis, quae esse libero, unde possimus. Odio nisi placeat cum at quos. Accusamus dolorum itaque, beatae et provident quis soluta esse veniam ipsam. Architecto expedita aperiam fuga dicta ea quam unde accusantium voluptatem rerum? Deleniti, tempore officia harum itaque tempora aut, optio ab voluptatum autem odit sapiente iste exercitationem mollitia velit minima aperiam! Esse totam excepturi maiores ducimus laborum impedit repellendus maxime reiciendis eum rem. Labore, culpa maiores, quaerat doloremque aut totam praesentium temporibus officia nihil quas dolorum voluptates nam quod cupiditate tempore reiciendis tenetur adipisci blanditiis ab? Amet, debitis fuga. Alias ullam deleniti nam fugit quaerat magnam provident expedita.",
-      "category": 1,
+      "name": "Cá kho ",
+      "pic": "https://i0.wp.com/icdn.one/upload/2020/11/13/20201113064433-97c1dcad.jpg?w=1200&ssl=1",
+      "price": "40000",
+      "describes": "restser",
+      "category": "1",
       "id": 3
     },
     {
-      "name": "Món ",
-      "pic": "https://lh3.googleusercontent.com/proxy/cab23hcxGe-f32J_84xyxg97c5YCf86YWzbh5eRUEmZdidvCdS65O1NxtKz2Tli2vmv7mNTpX3jwVdbrtZydp710vTRAwCPfc7XWJAS47qjMXjQqAR0-F6hrtlACSCI",
-      "price": "40",
-      "describes": "restser",
-      "category": "2",
-      "id": 4
-    },
-    {
-      "id": 5,
-      "name": "Mực ống",
-      "pic": "https://media.cooky.vn/recipe/g5/49966/s640/cooky-recipe-cover-r49966.jpg",
-      "price": "35",
-      "describes": "Dep gai",
+      "name": "Ca nuong",
+      "pic": "/images/lobster.png",
+      "price": "10000",
+      "describes": "ngon",
       "category": "1",
-      "status": "1"
+      "id": 5
     },
     {
       "name": "Cá kho mía ",
@@ -48,6 +31,32 @@
       "describes": "restser",
       "category": "1",
       "id": 7
+    },
+    {
+      "name": "Cá ",
+      "pic": "https://i0.wp.com/icdn.one/upload/2020/11/13/20201113064433-97c1dcad.jpg?w=1200&ssl=1",
+      "price": 30000,
+      "describes": "restser",
+      "category": "1",
+      "id": 1
+    },
+    {
+      "id": 8,
+      "name": "Ca nuong",
+      "pic": "/images/lobster.png",
+      "price": "10",
+      "describes": "ngon",
+      "category": "1",
+      "status": "1"
+    },
+    {
+      "id": 9,
+      "name": "Ca luoc",
+      "pic": "/images/lobster.png",
+      "price": "100",
+      "describes": "ngon lam",
+      "category": "2",
+      "status": "1"
     }
   ],
   "picture": [

@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import AppAdmin from './component/Admin/AppAdmin.js';
 // import routes from './routes.js';
 // import Header from '../../ecomerce_reactJS_Project/src/compenent/Header.js';
-import routes from './routes.js';
-import Header from './component/Header.js';
-import Content from './component/Content.js';
-import AnhMenu from './component/home/AnhMenu.js';
+// import routes from './routes.js';
+// import Header from './component/Admin/Header/Header';
+// import Content from './component/Admin/Content/HomeAdmin';
+// import AnhMenu from './component/home/AnhMenu.js';
 
 class App extends Component {
     render() {
@@ -15,9 +15,10 @@ class App extends Component {
             //     <AppAdmin/>
             // </div>
             <Router>
-                <Header />
+                {/* <Header /> */}
+                <AppAdmin/>
                 {/* <AnhMenu /> */}
-                <Content />
+                {/* <Content /> */}
                 {/* <ul>
                     <li><Link to="/">Main</Link></li>
                     <li><Link to="/about">About</Link></li>

@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Allproduct from './AllProduct.js';
-import Login_main from './component/login/login_main';
+// import App from './App';
+// import Allproduct from './AllProduct.js';
+// import Login_main from './component/login/login_main';
+import AppAdmin from './component/Admin/AppAdmin';
 
-// --------------------router-------------------------
+// --------------------ADMIN-------------------------
 
 ReactDOM.render(
 <React.StrictMode>
-    <App />
+    <AppAdmin />
 </React.StrictMode>,
   document.getElementById('root')
 );
@@ -25,12 +26,12 @@ ReactDOM.render(
 
 
 // -----------------------------------Login----------------
-ReactDOM.render(
-<React.StrictMode>
-<App/>
-</React.StrictMode>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+// <React.StrictMode>
+// <App/>
+// </React.StrictMode>,
+//   document.getElementById('root')
+// );
 // ReactDOM.render(
 // <React.StrictMode>
 // <Login_main/>

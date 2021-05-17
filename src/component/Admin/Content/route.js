@@ -1,12 +1,12 @@
 import React from 'react';
-import Dangchuanbi from './Dangchuanbi';
-import Danggiao from './Danggiao';
-import Dagiao from './Dagiao';
+import Dangchuanbi from './Order/Dangchuanbi';
+import Danggiao from './Order/Danggiao';
+import Dagiao from './Order/Dagiao';
 
 
 const route =[
     {
-        path:'Book',
+        path:'/',
         exact:true,
         main:()=><Dangchuanbi/>
     },
@@ -20,6 +20,7 @@ const route =[
         exact:true,
         main:({match})=><Dagiao match={match}/>
     }
+
 ]
 
 export default route;

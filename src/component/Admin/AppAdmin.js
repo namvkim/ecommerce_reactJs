@@ -7,30 +7,24 @@ class AppAdmin extends Component {
     render() {
         return (
             <Router>
-               <div className="layout_header">
+               <div className="layout_header_admin">
                    <Header/>
-                   {/* <div>
-                         <ul>
-                            <li><Link to="/">HomeAdmin</Link></li>
-                            <li><Link to="/Book">Book</Link></li>
-                            <li><Link to="/ListProduct">ListProduct</Link></li>
-                            <li><Link to="/UserManagement">UserManagement</Link></li>
-                        </ul>
-                   </div> */}
+             
 
 
-                   <div class="layout_header_main">
-                    <ul class="layout_header_menu">
-                        <a ><Link to="/">HOME PAGE</Link></a>
-                        <a ><Link to="/Book">BOOK</Link></a>
+                   <div class="layout_header_main_admin">
+                    <ul class="layout_header_menu_admin">
+                        <a ><Link to="/">BOOK</Link></a>
                         <a ><Link to="/ListProduct">LIST PRODUCT</Link></a>
-                        <a ><Link to="/UserManagement">USER MANAGEMENT</Link></a>                       
+                        <a ><Link to="/UserManagement">USER MANAGEMENT</Link></a>  
+                        <a className="main-admin"><Link >ADMIN</Link></a>  
+
                     </ul>
-                    <nav class="main-nav">
-                        <ul>
-                            <a><b>ADMIN</b></a>   
-                        </ul>
-                    </nav>
+                   
+                       
+                    
+                        
+                    
                    </div>
 
                     <div>

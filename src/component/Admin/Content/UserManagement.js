@@ -81,12 +81,15 @@ class UserManagement extends Component {
     render() {
         return (
             <React.Fragment>
-              <div className="layout_body"> 
+              <div className="layout_body ">
+              < div className="book_content_user"> 
 
+              <div className="example_user">
+                {/* <div className=" content"> */}
              
-                <div className=" content">
+
                 
-                                <table  className="border col-sm-12 p-2 m-2">
+                                <table  className="border col-sm-11 p-2 m-2">
                                 <tr className="border">
                                     <th>ID</th>
                                     <th>Name</th>
@@ -99,7 +102,7 @@ class UserManagement extends Component {
                                 {this.state.users.map(us => {
                         return (
                             
-                                <tr>
+                                <tr className="tr">
                                     <td>{us.id}</td>
                                     <td>{us.name}</td>
                                     <td>{us.pass}</td>
@@ -115,8 +118,10 @@ class UserManagement extends Component {
                                   
                                    );})}
                                  </table>
+                                 </div>
                 </div>
                 </div>
+                {/* </div> */}
             </React.Fragment>
         );
     }

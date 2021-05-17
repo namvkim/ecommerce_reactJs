@@ -16,32 +16,33 @@ class Book extends Component {
     render() {
         return (
             
-                    <div className="class_pro">
+                //   <Router>
+                        <div className="class_pro">
                 <div className="book_content_a">
                 
-                        {/* <li className="class_pro"> */}
-                        {/* <Link  className="class_pro">
+                        {/* <li className="class_pro"> 
+                        <Link  className="class_pro" to="/">
                         <p className="book_class_icon_padding"><img src="https://image.flaticon.com/icons/png/512/10/10627.png" width="50px" /></p>
                         <p className="book_class_text_padding"  style={{color: 'black'}}> Đang chuẩn bị</p>
-                        </Link> */}
-                        {/* </li> */}
+                        </Link>
+                        </li>
                     
-                        {/* <li className="class_pro"> */}
-                        {/* <Link  className="class_pro">
+                        <li className="class_pro">
+                        <Link  className="class_pro" to="/danggiao">
                         <p className="book_class_icon_padding"><img src="https://static.thenounproject.com/png/191969-200.png" width="50px" /> </p>
                         <p className="book_class_text_padding" style={{color: 'black'}}>Đang giao</p>
-                        </Link> */}
-                        {/* </li> */}
-                        {/* <li className="class_pro"> */}
-                        {/* <Link  className="class_pro">
+                        </Link>
+                        </li>
+                        <li className="class_pro">
+                        <Link  className="class_pro" to="dagiao">
                         <p className="book_class_icon_padding"><img src="https://i.pinimg.com/originals/67/97/28/6797287e51b143b9645e11fedf1eaa8d.png" width="50px" /></p>
                         <p className="book_class_text_padding"  style={{color: 'black'}}> Đã giao</p>
-                        </Link> */}
-                        {/* </li> */}
+                        </Link>
+                        </li> */}
 
 
                         <div className="tab">
-                            <button className="tablinks class_pro" onClick={()=>this.openCity( 'Dangchuanbi')}  >
+                            <button className="tablinks class_pro" onClick={()=>this.openCity( 'Dangchuanbi')} return true >
                                 <p className="book_class_icon_padding"><img src="https://image.flaticon.com/icons/png/512/10/10627.png" width="50px" /></p>
                                 <p className="book_class_text_padding">Đang chuẩn bị</p>
                             </button>
@@ -58,8 +59,10 @@ class Book extends Component {
                         
                 </div>
                 <div className="book_content_b">
-                
-                <div id="Dangchuanbi" className="tabcontent">
+                {/* <Switch>
+                        {this.openCity("Dangchuanbi")}
+                </Switch> */}
+                <div id="Dangchuanbi" className="tabcontent" >
                         <Dangchuanbi/>
                         </div>
                         <div id="Danggiao" className="tabcontent">
@@ -69,9 +72,14 @@ class Book extends Component {
                         <div id="Dagiao" className="tabcontent">
                         <Dagiao/>
                         </div>
+
+                        {/* <Switch>
+                            {this.showContentMenu(route)}
+                        </Switch>  */}
                        
                 </div>
             </div>
+                //   </Router>
                
         );
     }
@@ -86,10 +94,12 @@ class Book extends Component {
     //         });
     //     }
     //     return result;
-    //}
+    // }
 
 
-            
+    componentDidMount() {
+        this.openCity("Dangchuanbi");
+    }
     
      openCity=( bookname)=> {
       var i, tabcontent, tablinks;

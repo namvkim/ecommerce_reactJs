@@ -11,12 +11,12 @@ const route =[
         main:()=><Dangchuanbi/>
     },
     {
-        path:'Book/Danggiao',
+        path:'Book/danggiao',
         exact:true,
         main:({match})=><Danggiao match={match}/>
     },
     {
-        path:'Book/Dagiao',
+        path:'Book/dagiao',
         exact:true,
         main:({match})=><Dagiao match={match}/>
     }

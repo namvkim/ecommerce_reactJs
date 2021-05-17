@@ -162,3 +162,26 @@
     background-color: #009432;
     margin: 10px;
 }
+
+.a {
+    display: flex; /* the default for span */
+   margin: 10px;
+    padding: 5px;
+  }
+  .modal_detail{
+      margin: 10px;
+    padding: 5px;
+  }
+  .modal_detail_center{
+      text-align: center;
+  }
+  .example_detail {
+      width: 400px;
+      height: 250px;
+      overflow-y: scroll; 
+    }
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .example_detail::-webkit-scrollbar {
+        display: none;
+    }

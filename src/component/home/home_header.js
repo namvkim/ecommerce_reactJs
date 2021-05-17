@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Login_main from '../login/login_main';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import Routes from '../../routes';
 
 class Home_header extends Component {
   url_layout_home = "http://localhost:3000/admin_home";
@@ -38,6 +40,7 @@ class Home_header extends Component {
       i++;
     })
     return (
+      <Router>
       <div className="layout_header">
         <div className="layout_header_logo">
           <div className="layout_header_logo_box">
@@ -62,6 +65,7 @@ class Home_header extends Component {
           <Login_main/>
         </div>
       </div>
+      </Router>
     );
   }
 }

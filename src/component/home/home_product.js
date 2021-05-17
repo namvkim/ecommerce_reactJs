@@ -8,6 +8,11 @@ class Home_product extends Component {
     super(props);
     this.state = {
       products: [],
+      id: "",
+      name: "",
+      price: "",
+      pic: "",
+      describes: ""
     };
   }
 
@@ -29,6 +34,29 @@ class Home_product extends Component {
     this.callAPI(this.url_products, "GET", "");
   }
 
+  componentDidMount1() {
+    var { match } = this.props;
+    if (match) {
+      var id = match.params.id;
+      console.log(id);
+      axios({
+        method: 'GET',
+        url: `http://localhost:3000/products/${id}`,
+        data: null
+      }).then(res => {
+        this.setState({
+          id: res.data.id,
+          name: res.data.name,
+          price: res.data.price,
+          pic: res.data.pic,
+          describes: res.data.describes,
+          
+        }); console.log(res.data);
+      }).catch(err => {
+      });
+    }
+  }
+
   render() {
     let products_food = this.state.products.map((product, index) => {
       if (product.status ===1 && product.category===1)
@@ -40,8 +68,15 @@ class Home_product extends Component {
             </div>
             <div className="index_tab-pane_row_right">
               <p className="index_tab-pane_price">{product.price} VND</p>
-              <button className="index_tab-pane_btn">Add</button>
+              <button className="index_tab-pane_btn">Add to cart</button>
+              {/* <button className="index_tab-pane_btn">Detail</button> */}
+
+              <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
+          Detail
+        </button>
+
             </div>
+            
           </div>
         );
     });
@@ -56,7 +91,10 @@ class Home_product extends Component {
             </div>
             <div className="index_tab-pane_row_right">
               <p className="index_tab-pane_price">{product.price} VND</p>
-              <button className="index_tab-pane_btn">Add</button>
+              <button className="index_tab-pane_btn">Add to cart</button>
+              <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
+          Detail
+        </button>
             </div>
           </div>
         );
@@ -64,6 +102,28 @@ class Home_product extends Component {
 
     return (
       <div className="index_content_menu">
+        <div className="modal fade" id="exampleModalCenter" tabIndex={-1} role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div className="modal-dialog modal-dialog-centered" role="document">
+            <div className="modal-content-detail">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLongTitle">kjnmyug{this.props.name}</h5>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div className="modal-body a">         
+                <div className="modal_detail">            
+                  <p>{this.state.pic}</p>
+                  <p className="modal_detail_center">{this.state.price}</p>
+                </div>          
+                <div className="modal_detail example_detail">{this.state.describes}</div>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="index_content_menu_title">
           <img
             src="https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/orange_travelpictdinner_1484336833.png"
@@ -157,7 +217,10 @@ class Home_product extends Component {
                 </div>
                 <div className="index_tab-pane_row_right">
                   <p className="index_tab-pane_price">200.000 VND</p>
-                  <button className="index_tab-pane_btn">Add</button>
+                  <button className="index_tab-pane_btn">Add to cart</button>
+                  <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
+          Detail
+        </button>
                 </div>
               </div>
             </div>
@@ -193,7 +256,10 @@ class Home_product extends Component {
                 </div>
                 <div className="index_tab-pane_row_right">
                   <p className="index_tab-pane_price">200.000 VND</p>
-                  <button className="index_tab-pane_btn">Add</button>
+                  <button className="index_tab-pane_btn">Add to cart</button>
+                  <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
+          Detail
+        </button>
                 </div>
               </div>
             </div>
@@ -213,15 +279,21 @@ class Home_product extends Component {
                 </div>
                 <div className="index_tab-pane_row_right">
                   <p className="index_tab-pane_price">200.000 VND</p>
-                  <button className="index_tab-pane_btn">Add</button>
+                  <button className="index_tab-pane_btn">Add to cart</button>
+                  <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
+          Detail
+        </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
+      
     );
   }
+  
 }
 
 export default Home_product;

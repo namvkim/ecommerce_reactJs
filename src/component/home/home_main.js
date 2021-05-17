@@ -4,6 +4,7 @@ import Home_advance from "./home_advance";
 import Home_about from "./home_about";
 import Home_product from "./home_product";
 import Home_footer from "./home_footer";
+import ProDetail from "./ProDetail";
 
 class Home_main extends Component {
   render() {
@@ -15,7 +16,7 @@ class Home_main extends Component {
             <Home_advance />
             <Home_about />
             <Home_product />
-          </div>
+          </div>  
         </div>
         <Home_footer />
       </div>

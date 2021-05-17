@@ -35,7 +35,7 @@ class Home_product extends Component {
         return (
           <div className="index_tab-pane_row" key={index}>
             <div className="index_tab-pane_row_left">
-              <img src={product.pic} alt="" />
+              <img src={product.pics[0]} alt="" />
               <p className="index_tab-pane_name">{product.name}</p>
             </div>
             <div className="index_tab-pane_row_right">
@@ -51,7 +51,7 @@ class Home_product extends Component {
         return (
           <div className="index_tab-pane_row" key={index}>
             <div className="index_tab-pane_row_left">
-              <img src={product.pic} alt="" />
+              <img src={product.pics[0]} alt="" />
               <p className="index_tab-pane_name">{product.name}</p>
             </div>
             <div className="index_tab-pane_row_right">

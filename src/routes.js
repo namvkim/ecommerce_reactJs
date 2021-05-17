@@ -1,8 +1,5 @@
 import React from 'react';
-import Main from './component/main';
-import About from './component/about';
-import Add from './component/add';
-import ProDetail from './component/ProDetail';
+
 
 const routes =[
     {

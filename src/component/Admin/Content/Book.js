@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link, Router,Route, Switch } from 'react-router-dom';
-import Dagiao from './Order/Dagiao';
-import Dangchuanbi from './Order/Dangchuanbi';
-import Danggiao from './Order/Danggiao';
+import Dagiao from './Order/dagiao';
+import Dangchuanbi from './Order/dangchuanbi';
+import Danggiao from './Order/danggiao';
 
 import route from './route';
 class Book extends Component {

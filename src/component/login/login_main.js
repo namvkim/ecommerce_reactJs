@@ -28,7 +28,7 @@ class Login_main extends Component {
 
   render() {
     return (
-      <div>
+      <div className="login_main">
         <div id="log_out"  style={{display: 'none'}}>
           <span className="log_out_name" id="log_out_name">{this.state.user!=null?this.state.user.name:''}</span>
           <button className="log_out_btn" onClick={()=>this.logOut()}>LogOut</button>
@@ -47,7 +47,6 @@ class Login_main extends Component {
             </li>
           </ul>
         </nav>
-    
         <div className="user-modal">
           <div className="user-modal-container">
             <ul className="switcher">

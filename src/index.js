@@ -1,48 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-// import Allproduct from './AllProduct.js';
-// import Login_main from './component/login/login_main';
-import Home_main from './component/home/home_main';
-import AppAdmin from './component/Admin/AppAdmin';
-// --------------------ADMIN-------------------------
+import reactDom from 'react-dom';
+import App from './app';
+import routes from './routes_manager';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
-// ReactDOM.render(
-// <React.StrictMode>
-//     <App />
-// </React.StrictMode>,
-//   document.getElementById('root')
-// );
+class Manager extends Component {
+  showContentMenu = (routes) => {
+    var result = null;
+    if (routes.length > 0) {
+      result = routes.map((route, index) => {
+        return (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        );
+      });
+    }
+    return result;
+  };
+  render() {
+    return (
+      <Router>
+        <Switch>{this.showContentMenu(routes)}</Switch>
+      </Router>
+    );
+  }
+}
 
-// ReactDOM.render(
-// <React.StrictMode>
-//     <AppAdmin />
-// </React.StrictMode>,
-//   document.getElementById('root')
-// );
 
-
-
-// ---------------------------------CRUD---------------------
-// ReactDOM.render(
-// <React.StrictMode>
-//     <Allproduct />
-// </React.StrictMode>,
-//   document.getElementById('showpro')
-// );
-
-
-// -----------------------------------Login----------------
-// ReactDOM.render(
-// <React.StrictMode>
-// <Login_main/>
-// </React.StrictMode>,
-//   document.getElementById('root')
-// );
-ReactDOM.render(
-<React.StrictMode>
-<Home_main/>
-</React.StrictMode>,
+reactDom.render(
+  <Manager/>,
   document.getElementById('root')
-);
-
-
+)

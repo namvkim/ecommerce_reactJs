@@ -1,13 +1,13 @@
 import React from 'react';
-import Book from './Content/Book';
-import ListProduct from './Content/ListProduct';
-import UserManagement from './Content/UserManagement';
+import Book from './content/book';
+import ListProduct from './content/listProduct';
+import UserManagement from './content/userManagement';
 
 
 const rout =[
    
     {
-        path:'/',
+        path:'/admin',
         exact:true,
         main:()=><Book/>,
     },

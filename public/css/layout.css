@@ -56,12 +56,12 @@ html {
 .layout_header_main a {
     margin: 0 40px;
     color: white;
+    text-decoration: none;
 }
 
 .layout_header_main a:hover {
-    text-decoration: none;
     color: #fdcb6e;
-    transition: 0.layout_15s;
+    transition: 0.15s;
 }
 
 .layout_header_menu {

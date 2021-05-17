@@ -458,3 +458,8 @@
     background: #b13131;
     border: 2px solid #b13131;
 }
+
+.login_main{
+    position: absolute;
+    right: 0;
+}

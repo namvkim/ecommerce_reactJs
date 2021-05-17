@@ -1,11 +1,16 @@
 import React from 'react';
-import Home_main from './component/home/home_main';
+import App from './app';
 import Admin from './component/admin/appAdmin';
 const routes =[
     {
         path:'/',
         exact:true,
-        main:()=><Home_main/>,
+        main:()=><App/>,
+    },
+    {
+        path:'/admin',
+        exact:true,
+        main:()=><Admin/>,
     }
 ]
 

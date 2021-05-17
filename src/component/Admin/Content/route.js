@@ -1,7 +1,7 @@
 import React from 'react';
-import Dangchuanbi from './Order/Dangchuanbi';
-import Danggiao from './Order/Danggiao';
-import Dagiao from './Order/Dagiao';
+import Dangchuanbi from './Order/dangchuanbi';
+import Danggiao from './Order/danggiao';
+import Dagiao from './Order/dagiao';
 
 
 const route =[

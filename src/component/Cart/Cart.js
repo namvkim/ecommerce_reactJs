@@ -106,7 +106,7 @@ class Cart extends Component {
                     <td style={{fontWeight:'bold', color: 'red'}}>{util.formatCurrency(
                 cartItems.reduce((a, c) => a + c.price * c.count, 0)
               )} </td>
-                    <td className="btn btn-warning" style={{padding:'5px 15px'}} >Book</td>
+                    <td className="btn btn-warning" style={{padding:'5px 15px'}}> Book</td>
                 </tr>
                
                     

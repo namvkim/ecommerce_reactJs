@@ -66,7 +66,6 @@ class Home_product extends Component {
     var count =0;
     if(localStorage.getItem('cartItems')) arr=JSON.parse(localStorage.getItem('cartItems'));
     arr.push(product);
-   
     localStorage.setItem('cartItems', JSON.stringify(arr));
 
    

@@ -7,28 +7,119 @@ class UserManagement extends Component {
         super(props);
         this.state = {
             users : [],
-            sort: true,
-            // title: "",
-            // img: "",
-            // price: ""
-            id:"",
-            name:"",
-            pass:"",
-            phone:"",
-            email:"",
-            address:"",
-            status:""
+            sort: true,          
+            name: "",
+            pass: "",
+            phone: "",
+            email: "",
+            address: "",
+            status: "0"
           }
     }
-    // Block=()=>{
-    //     axios({
-    //         method: 'POST',
-    //         url: 'http://localhost:3000/users',
-    //         data: null
-    //       }).then( res =>{
-    //         this.setState({users: res.data});
-    //       }).catch(err=>{});
-    // }
+
+  
+  Block = (id)=>{
+    var name = "";
+    var pass=  "";
+    var phone= "";
+    var email= "";
+    var address = "";
+    var status= 1;
+    let data = this.state.users;
+        data.map((key, index) =>{
+          if(key.id === id){
+            name = key.name;
+            pass =  key.pass;
+            phone = key.phone;
+            email = key.email;
+            address = key.address;
+            status  = 0;
+          }
+        }
+        
+    );
+      axios({
+        method: 'PUT',
+        url: `http://localhost:3000/users/${id}`,
+        data: {         
+          name:  name,
+          pass: pass,
+          phone: phone,
+          email: email,
+          address : address,
+          status: 0
+        }        
+      })
+      .then(res => {
+      this.setState({
+        users: data,
+        name:  name,
+        pass: pass,
+        phone: phone,
+        email: email,
+        address : address,
+        status: 0
+        
+        })
+        res.data = this.state.users;
+        this.getData();
+      })
+      .catch(err => {
+        alert("Không thành công");
+      })
+  }
+
+  UnBlock = (id)=>{
+    var name = "";
+    var pass=  "";
+    var phone= "";
+    var email= "";
+    var address = "";
+    var status= 1;
+    let data = this.state.users;
+        data.map((key, index) =>{
+          if(key.id === id){
+            name = key.name;
+            pass =  key.pass;
+            phone = key.phone;
+            email = key.email;
+            address = key.address;
+            status  = 1;
+          }
+        }
+        
+    );
+      axios({
+        method: 'PUT',
+        url: `http://localhost:3000/users/${id}`,
+        data: {         
+          name:  name,
+          pass: pass,
+          phone: phone,
+          email: email,
+          address : address,
+          status: 1
+        }        
+      })
+      .then(res => {
+      this.setState({
+        users: data,
+        name:  name,
+        pass: pass,
+        phone: phone,
+        email: email,
+        address : address,
+        status: 1
+        
+        })
+        res.data = this.state.users;
+        this.getData();
+      })
+      .catch(err => {
+        alert("Không thành công");
+      })
+  }
+
 
     getData = ()=>{
         axios({
@@ -45,39 +136,6 @@ class UserManagement extends Component {
     }
 
    
-
-    // render() {
-    //     var {title, img, price} = this.state;
-    //     return(
-    //       <div>
-            
-    //         {
-    //         this.state.users.map(a=>{
-    //           var i=0;
-    //           return(
-    //             <div>
-    //                <p>Tên : {a.name}
-    //                <p> Pass :{a.pass}</p>
-    //                <p> Phone :{a.phone}</p>
-    //                <p>Email :{a.email}</p>
-    //                <p>add :{a.address}</p>
-                      
-    //                   {/* <button onClick={()=>this.updateData(i)}>update</button> */}
-    //               {/* <button type="button" cprimary" onClick={this.updateData}>
-    //               <button type="button" className="btn btn-lassName="btn btn-primary" onClick={this.deleteData(a.id)}> */}
-    //                   <button type="button"  className="btn btn-danger"onClick={this.updateData}>Block</button>
-    //                   <button type="button"  className="btn btn-primary" onClick={()=>this.deleteData(a.id)}>UnBlock</button>
-    //                   {/* <button onClick={()=>this.deleteData(a.id)}>delete</button> */}
-    
-    //                </p>             
-    //             </div>
-    //           )
-    //           i++;
-    //         })}
-    //       </div>
-    //     )
-    //   }
-    
     render() {
         return (
             <React.Fragment>
@@ -86,9 +144,7 @@ class UserManagement extends Component {
 
               <div className="example_user">
                 {/* <div className=" content"> */}
-             
 
-                
                                 <table  className="border col-sm-11 p-2 m-2">
                                 <tr className="border">
                                     <th>ID</th>
@@ -99,7 +155,7 @@ class UserManagement extends Component {
                                     <th>Address</th>
                                     <th>Action</th>
                                 </tr>
-                                {this.state.users.map(us => {
+                                {this.state.users.map((us,index) => {
                         return (
                             
                                 <tr className="tr">
@@ -109,10 +165,8 @@ class UserManagement extends Component {
                                     <td>{us.phone}</td>
                                     <td>{us.email}</td>
                                     <td>{us.address}</td>
-                                    <td> {us.status===(!1)?<button type="button" 
-                                      className="btn btn-success">UnBlock</button>:<button type="button"   className="btn btn-danger">Block</button>}
-                                         
-                                                                         
+                                    <td> {us.status===1?<button type="submit" 
+                                      className="btn btn-success" onClick={() => this.Block(us.id)}>Block</button>:<button type="submit"  onClick={() => this.UnBlock(us.id)} className="btn btn-danger">Unblock</button>}                                                                                                         
                                     </td>
                                 </tr>
                                   

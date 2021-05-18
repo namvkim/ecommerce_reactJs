@@ -8,12 +8,9 @@ class ListProduct extends Component {
     super(props);
     this.state = {
       products: [],
-      // img:[],
       sort: true,
-
       action: "ADD",
       id: "",
-      // index:1,
       name: "",
       price: "",
       describes: "",
@@ -96,28 +93,7 @@ class ListProduct extends Component {
 
   componentDidMount() {
     this.getData();
-    // var { match } = this.props;
-    // if (match) {
-
-    //   var id = match.params.id;
-    //   console.log(id);
-    //   axios({
-    //     method: 'GET',
-    //     url: `http://localhost:3000/products/${id}`,
-    //     data: null
-    //   }).then(res => {
-    //     this.setState({
-    //       id: res.data.id,
-    //       name: res.data.name,
-    //       pics: res.data.pics,
-    //       price: res.data.price,
-    //       describes: res.data.describes,
-    //       category: res.data.category,
-
-    //     });
-    //   }).catch(err => {
-    //   });
-    // }
+   
   }
 
 
@@ -242,7 +218,7 @@ render() {
                     <td>
                       <img src={pro.pics[0]} width="100px" />
                     </td>
-                    <td>{pro.category}</td>
+                    <td>{pro.category===1?"Food":"Drink"}</td>
                     <td >
                       <a onClick={() => this.Edit(pro, index)}> <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_settings_48px-512.png" width="35px" height="35px" /></a>
                       <a onClick={() => this.deleteData(pro.id)}> <img src="https://cdn0.iconfinder.com/data/icons/simpline-mix/64/simpline_36-512.png" width="35px" height="35px" /></a>

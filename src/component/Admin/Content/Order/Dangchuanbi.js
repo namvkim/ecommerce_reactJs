@@ -66,6 +66,7 @@ class Dangchuanbi extends Component {
   }
 
   render() {
+    var pri=0;
     return (
 
       <div className="container">
@@ -94,8 +95,10 @@ class Dangchuanbi extends Component {
                   </td>
                   <td >
                     {this.state.products.map((products) => {
+                      
                       return (
                         <p>{orders.orders_details[0].id_pro === products.id ? products.name : null}</p>
+                        
                       )
                     }
                     )
@@ -110,7 +113,14 @@ class Dangchuanbi extends Component {
                     }
                   </td>
                   <td>{orders.orders_details[0].quantity}</td>
-                  <td> chưa biết 200 VND</td>
+                  <td  > 
+                  {this.state.products.map((products) => {
+                      return (
+                        <p>{orders.orders_details[0].id_pro === products.id ? pri=products.price*5:null}</p>                        
+                      )
+                    }
+                    )
+                    } </td>
                 </tr>
 
               </table>

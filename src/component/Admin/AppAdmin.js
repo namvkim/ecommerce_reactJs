@@ -11,9 +11,9 @@ class AppAdmin extends Component {
                    <Header/>
                    <div class="layout_header_main_admin">
                     <ul class="layout_header_menu_admin">
-                        <a ><Link to="/admin">BOOK</Link></a>
-                        <a ><Link to="/ListProduct">LIST PRODUCT</Link></a>
-                        <a ><Link to="/UserManagement">USER MANAGEMENT</Link></a>  
+                        <a ><Link to="/admin">ORDER MANAGEMENT</Link></a>
+                        <a ><Link to="/listProduct">LIST PRODUCT</Link></a>
+                        <a ><Link to="/userManagement">USER MANAGEMENT</Link></a>  
                         <a className="main-admin"><Link >ADMIN</Link></a>  
 
                     </ul>                                                               

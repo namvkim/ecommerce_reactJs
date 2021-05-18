@@ -1,7 +1,7 @@
 import React from 'react';
-import Book from './content/book';
-import ListProduct from './content/listProduct';
-import UserManagement from './content/userManagement';
+import Book from './Content/book';
+import ListProduct from './Content/listProduct';
+import UserManagement from './Content/userManagement';
 
 
 const rout =[
@@ -12,12 +12,12 @@ const rout =[
         main:()=><Book/>,
     },
     {
-        path:'/ListProduct',
+        path:'/listProduct',
         exact:true,
         main:({match})=><ListProduct match={match}/>,
     },
     {
-        path:'/UserManagement',
+        path:'/userManagement',
         exact:true,
         main:({match})=><UserManagement match={match}/>,
     },

@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './app';
-import Admin from './component/admin/appAdmin';
+import Admin from './component/Admin/appAdmin';
 const routes =[
     {
         path:'/',

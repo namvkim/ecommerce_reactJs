@@ -18,7 +18,7 @@ class ListProduct extends Component {
       price: "",
       describes: "",
       category: "",
-      pic: "",
+      pics: [],
       status: ""
     }
    
@@ -34,7 +34,7 @@ class ListProduct extends Component {
     var type = target.type;
 
     if (type === "file") {
-      value = this.pic.value.replace(/C:\\fakepath\\/i, "/images/");
+      value = this.pics.value.replace(/C:\\fakepath\\/i, "/images/");
     }
     this.setState(
       {
@@ -46,14 +46,14 @@ class ListProduct extends Component {
 
   postData = (event) => {
     event.preventDefault();
-    var { id, name, price, describes, category, pic } = this.state;
+    var { id, name, price, describes, category, pics } = this.state;
     axios({
       method: 'POST',
       url: 'http://localhost:3000/products',
       data: {
         id: id,
         name: name,
-        pic: pic,
+        pics: pics,
         price: price,
         describes: describes,
         category: category,
@@ -96,28 +96,28 @@ class ListProduct extends Component {
 
   componentDidMount() {
     this.getData();
-    var { match } = this.props;
-    if (match) {
+    // var { match } = this.props;
+    // if (match) {
 
-      var id = match.params.id;
-      console.log(id);
-      axios({
-        method: 'GET',
-        url: `http://localhost:3000/products/${id}`,
-        data: null
-      }).then(res => {
-        this.setState({
-          id: res.data.id,
-          name: res.data.name,
-          pic: res.data.pic,
-          price: res.data.price,
-          describes: res.data.describes,
-          category: res.data.category,
+    //   var id = match.params.id;
+    //   console.log(id);
+    //   axios({
+    //     method: 'GET',
+    //     url: `http://localhost:3000/products/${id}`,
+    //     data: null
+    //   }).then(res => {
+    //     this.setState({
+    //       id: res.data.id,
+    //       name: res.data.name,
+    //       pics: res.data.pics,
+    //       price: res.data.price,
+    //       describes: res.data.describes,
+    //       category: res.data.category,
 
-        });
-      }).catch(err => {
-      });
-    }
+    //     });
+    //   }).catch(err => {
+    //   });
+    // }
   }
 
 
@@ -125,18 +125,14 @@ class ListProduct extends Component {
     const product = this.setState({
       action: 'UPDATE',
       name: item.name,
-      pic: item.pic,
+      pics: item.pics,
       price: item.price,
       category: item.category,
       describes: item.describes,
-
       id: item.id
-      //loi
-
     }
 
     );
-    // alert("heloo 1");
   }
 
   updateItem = () => {
@@ -146,7 +142,7 @@ class ListProduct extends Component {
       url: `http://localhost:3000/products/${this.state.id}`,
       data: {
         name: this.state.name,
-        pic: this.state.pic,
+        pics: this.state.pic,
         price: this.state.price,
         describes: this.state.describes,
         category: this.state.category
@@ -154,7 +150,7 @@ class ListProduct extends Component {
     }).then(res => {
       this.setState({
         name: "",
-        pic: "",
+        pics: "",
         price: "",
         describes: "",
         category: "",
@@ -190,7 +186,7 @@ render() {
               <input type="number" name="price" placeholder="Giá" value={this.state.price} onChange={this.onChange} required="" />
             </div>
             <div class="form-sub-w3">
-              <input type="file" name="pic" ref={(input) => { this.pic = input }} placeholder="" onChange={this.onChange} required="" />
+              <input type="file" name="pics" ref={(input) => { this.pics= input }} placeholder="" onChange={this.onChange} required="" />
             </div>
             <div class="form-sub-w3 class_pro_radio" >
 
@@ -244,7 +240,7 @@ render() {
                     <td>{pro.name}</td>
                     <td>{pro.price}</td>
                     <td>
-                      <img src={pro.pic} width="100px" />
+                      <img src={pro.pics[0]} width="100px" />
                     </td>
                     <td>{pro.category}</td>
                     <td >

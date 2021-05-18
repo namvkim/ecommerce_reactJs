@@ -1,7 +1,7 @@
 import React from 'react';
-import Book from './content/book';
-import ListProduct from './content/listProduct';
-import UserManagement from './content/userManagement';
+import Book from './Content/Book';
+import ListProduct from './Content/ListProduct';
+import UserManagement from './Content/UserManagement';
 
 
 const rout =[

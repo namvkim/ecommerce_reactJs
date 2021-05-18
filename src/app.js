@@ -30,10 +30,10 @@ class App extends Component {
           <div className="layout_header_main">
             <ul className="layout_header_menu">
                 <Link to="/">HOME PAGE</Link>
-                <Link to="/">HISTORY</Link>
+                <Link to="/history">HISTORY</Link>
                 <Link to="/">RECRUITMENT</Link>
                 <Link to="/">CONTACT</Link>
-                <Link to="/"><i className="fas fa-cart-plus" /></Link>
+                <Link to="/cart"><i className="fas fa-cart-plus" />CART</Link>
             </ul>
             <Login_main />
           </div>

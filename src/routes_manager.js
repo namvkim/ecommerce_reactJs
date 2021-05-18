@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './app';
-import Admin from './component/admin/appAdmin';
+import AppAdmin from './component/Admin/AppAdmin';
 const routes =[
     {
         path:'/',
@@ -10,7 +10,7 @@ const routes =[
     {
         path:'/admin',
         exact:true,
-        main:()=><Admin/>,
+        main:()=><AppAdmin/>,
     }
 ]
 

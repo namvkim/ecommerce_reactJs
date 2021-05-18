@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+
+
+
 class Home_product extends Component {
   url_products = "http://localhost:3000/products";
 
@@ -57,6 +60,19 @@ class Home_product extends Component {
     }
   }
 
+
+  addToCart = (product) => {
+    var arr=[];
+    var count =0;
+    if(localStorage.getItem('cartItems')) arr=JSON.parse(localStorage.getItem('cartItems'));
+    arr.push(product);
+   
+    localStorage.setItem('cartItems', JSON.stringify(arr));
+
+   
+ }
+  
+
   render() {
     let products_food = this.state.products.map((product, index) => {
       if (product.status ===1 && product.category===1)
@@ -68,7 +84,7 @@ class Home_product extends Component {
             </div>
             <div className="index_tab-pane_row_right">
               <p className="index_tab-pane_price">{product.price} VND</p>
-              <button className="index_tab-pane_btn">Add to cart</button>
+              <button className="index_tab-pane_btn" onClick={() => this.addToCart(product)}>Add to cart </button>
               {/* <button className="index_tab-pane_btn">Detail</button> */}
 
               <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
@@ -91,7 +107,7 @@ class Home_product extends Component {
             </div>
             <div className="index_tab-pane_row_right">
               <p className="index_tab-pane_price">{product.price} VND</p>
-              <button className="index_tab-pane_btn">Add to cart</button>
+              <button className="index_tab-pane_btn" onClick={() => this.addToCart(product)}>Add to cart</button>
               <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
           Detail
         </button>

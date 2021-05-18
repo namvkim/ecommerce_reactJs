@@ -35,11 +35,17 @@ class Home_product extends Component {
     this.callAPI(this.url_products, "GET", "");
   }
 
+  addToCart = (product) => {
+    var arr=[];
+    var count =0;
+    if(localStorage.getItem('cartItems')) arr=JSON.parse(localStorage.getItem('cartItems'));
+    arr.push(product);
+    localStorage.setItem('cartItems', JSON.stringify(arr));
 
-  detail=(id)=>{
-    this.setState({kt:id})
-    console.log(this.state.kt);
-  }
+   
+ }
+  
+
   render() {
     let products_food = this.state.products.map((product, index) => {
       if (product.status ===1 && product.category===1)
@@ -52,9 +58,14 @@ class Home_product extends Component {
             </div>
             <div className="index_tab-pane_row_right">
               <p className="index_tab-pane_price">{product.price} VND</p>
-              <button className="index_tab-pane_btn">Add to cart</button>
-              <button onClick={()=>this.detail(product.id)} className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter" onClick={()=>this.detail(product.id)}>Detail</button>
-               </div>
+              <button className="index_tab-pane_btn" onClick={() => this.addToCart(product)}>Add to cart </button>
+              {/* <button className="index_tab-pane_btn">Detail</button> */}
+
+              <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
+          Detail
+        </button>
+
+            </div>
             
           </div>
         );
@@ -70,8 +81,8 @@ class Home_product extends Component {
             </div>
             <div className="index_tab-pane_row_right">
               <p className="index_tab-pane_price">{product.price} VND</p>
-              <button className="index_tab-pane_btn">Add to cart</button>
-              <button onClick={()=>this.detail(product.id)} className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter" >
+              <button className="index_tab-pane_btn" onClick={() => this.addToCart(product)}>Add to cart</button>
+              <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
           Detail
         </button>
             </div>

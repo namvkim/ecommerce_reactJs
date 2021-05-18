@@ -1,15 +1,61 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import util from "../../util";
-import { addToCart, removeFromCart, increaseQuantity, decreaseQuantity } from "../../actions/cartActions";
+import { NavLink } from "react-router-dom";
 
-class Basket extends Component {
+import util from '../../util';
+
+
+
+ function increaseQuantity(items,index,id){
+  
+  const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+
+  let productAlreadyInCart = false;
+  cartItems.forEach((item) => {
+    if (item.id===id) {
+      cartItems[index].count += 1;
+      productAlreadyInCart = true;
+    }
+  });
+
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  
+
+};
+
+function decreaseQuantity(items,index,id){
+  
+  const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+
+  let productAlreadyInCart = false;
+  cartItems.forEach((item) => {
+    if (item.id===id) {
+      cartItems[index].count -= 1;
+     
+      productAlreadyInCart = true;
+    }
+  });
+
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+ 
+};
+
+function removeFromCart(items, product)  {
+  const cartItems = items.slice().filter((a) => a.id !== product.id);
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+ 
+};
+
+
+
+
+class Cart extends Component {
   render() {
-    const { cartItems } = this.props;
+    const  cartItems  = JSON.parse(localStorage.getItem("cartItems"));
    
   
     return (
-      <div className="alert alert-info" >
+      <div className="alert alert-light" >
+        
         {cartItems.length === 0 ? (
           "Basket is empty"
         ) : (
@@ -40,18 +86,16 @@ class Basket extends Component {
                         return(
                             <tr key={index}>    
                             <td><input type="checkbox"  style={{padding:'5px 10px'}}></input></td>
-                            <td>{item.title}</td>
-                            <td><img src={`images/${item.sku}_2.jpg`} style={{width:'100px',height:'80px'}}/></td>
+                            <td>{item.name}</td>
+                            <td><img src={item.pics[0]} style={{width:'100px',height:'80px'}}/></td>
                             <td>{item.price} $</td>
                             <td>
-                                    <span className="btn btn-primary" style={{margin:'2px'}} onClick={(e)=>this.props.decreaseQuantity(item,index,item.id)}>-</span>
+                                    <span className="btn btn-primary" style={{margin:'2px'}} onClick={(e)=>{decreaseQuantity(item,index,item.id)}}>-</span>
                                     <span className="btn btn-info">{item.count}</span>
-                                    <span className="btn btn-primary" style={{margin:'2px'}} onClick={(e)=>this.props.increaseQuantity(item,index,item.id)}>+</span>
+                                    <span className="btn btn-primary" style={{margin:'2px'}} onClick={(e)=>{increaseQuantity(item,index,item.id)}}>+</span>
                             </td>
                             <td>{ TotalPrice(item.price,item.count)} $</td>
-                            <td><i className="badge badge-danger" onClick={(e) =>
-                      this.props.removeFromCart(this.props.cartItems, item)
-                    }>X</i></td>
+                            <td><i className="badge badge-danger" onClick={(e) =>{removeFromCart(cartItems, item)}}> Delete</i></td>
                         </tr>
                         )
                     })
@@ -62,7 +106,7 @@ class Basket extends Component {
                     <td style={{fontWeight:'bold', color: 'red'}}>{util.formatCurrency(
                 cartItems.reduce((a, c) => a + c.price * c.count, 0)
               )} </td>
-                    <td className="btn btn-warning" style={{padding:'5px 15px'}}  onClick={() => alert("Todo: Implement checkout page.")} > Book</td>
+                    <td className="btn btn-warning" style={{padding:'5px 15px'}}> Book</td>
                 </tr>
                
                     
@@ -86,7 +130,4 @@ function TotalPrice(price,tonggia){
   return Number(price * tonggia).toLocaleString('en-US');
 }
 
-const mapStateToProps = (state) => ({
-  cartItems: state.cart.items,
-});
-export default connect(mapStateToProps, { addToCart, removeFromCart, increaseQuantity, decreaseQuantity })(Basket);
+export default Cart;

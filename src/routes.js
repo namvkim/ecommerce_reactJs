@@ -14,7 +14,7 @@ const routes =[
         path:'/cart',
         exact:true,
         main:()=><Cart/>,
-    }
+    },
 
      {
         path:'/booking',

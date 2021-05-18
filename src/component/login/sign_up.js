@@ -110,7 +110,7 @@ class Sign_up extends Component {
             <input
               className="full-width has-padding has-border"
               id="signup-phone"
-              type="number"
+              type="text"
               placeholder="Phone"
               name="phone"
               onChange={this.onChange}

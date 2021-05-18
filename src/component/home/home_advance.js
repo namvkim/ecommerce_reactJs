@@ -43,8 +43,9 @@ class Home_advance extends Component {
     document.getElementById('content_advan_img2_2_2').style.backgroundImage='url('+layout[6]+')';
     document.getElementById('content_advan_img3').style.backgroundImage='url('+layout[7]+')';
   }
+
   render() {
-    setTimeout(()=>this.show(),0);
+    setTimeout(()=>this.show(),50);
     return (
       <div className="index_content_advan">
         <div className="index_content_advan_img1" id="content_advan_img1" />

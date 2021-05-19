@@ -358,3 +358,6 @@ div.scroll {
     /* border: 1px solid #ccc; */
     border-top: none;
   }
+  .display{
+      display: flex;
+  }

@@ -38,7 +38,8 @@ class Sign_in extends Component {
       if (result.status === 0) {
         alert("your account has been locked ^.^");
       } else {
-        localStorage.setItem("user", JSON.stringify(result));
+        localStorage.setItem("user", JSON.stringify(result))
+        window.location.reload();
     };
     } else alert("Incorrect account or password !!");
   };
@@ -88,9 +89,9 @@ class Sign_in extends Component {
         <p className="form-bottom-message">
           <a href="#0">Forgot your password?</a>
         </p>
-        {/* <a href="#0" className="close-form">
+        <a href="#0" className="close-form">
           Close
-        </a> */}
+        </a>
       </div>
     );
   }

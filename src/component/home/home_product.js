@@ -78,6 +78,10 @@ class Home_product extends Component {
  }
   
 
+  detail=(id)=>{
+    this.setState({kt:id})
+    console.log(this.state.kt);
+  }
   render() {
     let products_food = this.state.products.map((product, index) => {
       if (product.status ===1 && product.category===1)

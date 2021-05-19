@@ -7,49 +7,31 @@ class Login_main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: null,
-      // load:true,
+      user:{}
     };
   }
 
-  // load=()=>{
-  //   this.setState({load:!this.state.load},alert(this.state.load));
-  // }
-
-  check = () => {
-    if (this.state.user != null) {
-      document.getElementById("log_out").style.display = "block";
-      document.getElementById("log_in").style.display = "none";
-    } else {
-      document.getElementById("log_out").style.display = "none";
-      document.getElementById("log_in").style.display = "block";
+  componentDidMount(){
+    this.state.user=JSON.parse(localStorage.getItem("user"));
+    if (this.state.user!=null) {
+      document.getElementById('log_out').style.display='block';
+      document.getElementById('log_in').style.display='none';
+    }else{
+      document.getElementById('log_out').style.display='none';
+      document.getElementById('log_in').style.display='block';
     }
-  };
-
-  componentDidMount() {
-    this.setState({ user: JSON.parse(localStorage.getItem("user")) });
-    this.check();
   }
 
-  componentDidUpdate() {
-    this.check();
+  logOut=()=>{
+    localStorage.removeItem('user');
   }
-
-  logOut = () => {
-    localStorage.removeItem("user");
-    this.setState({ user: null });
-  };
 
   render() {
     return (
       <div className="login_main">
-        <div id="log_out" style={{ display: "none" }}>
-          <span className="log_out_name" id="log_out_name">
-            {this.state.user != null ? this.state.user.name : ""}
-          </span>
-          <button className="log_out_btn" onClick={() => this.logOut()}>
-            LogOut
-          </button>
+        <div id="log_out"  style={{display: 'none'}}>
+          <span className="log_out_name" id="log_out_name">{this.state.user!=null?this.state.user.name:''}</span>
+          <button className="log_out_btn" onClick={()=>this.logOut()}>LogOut</button>
         </div>
         <nav className="main-nav" id="log_in">
           <ul>

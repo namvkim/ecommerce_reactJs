@@ -25,6 +25,7 @@ class Home_product extends Component {
     })
       .then((res) => {
         this.setState({ products: res.data });
+        localStorage.setItem('products', JSON.stringify(res.data));
       })
       .catch((err) => {
         alert(err);
@@ -36,11 +37,42 @@ class Home_product extends Component {
   }
 
   addToCart = (product) => {
+    let itemAdd = {
+      id: product.id,
+      quantity: 1,
+      unitPrice: product.price,
+      total: product.price
+    }
+
     var arr=[];
     var count =0;
-    if(localStorage.getItem('cartItems')) arr=JSON.parse(localStorage.getItem('cartItems'));
-    arr.push(product);
-    localStorage.setItem('cartItems', JSON.stringify(arr));
+    if(localStorage.getItem('cartItems')) {
+      arr=JSON.parse(localStorage.getItem('cartItems'));
+      const item = arr.find( item => item.id === product.id);
+      console.log(item);
+      if(item) {
+        let itemTerm = item;
+        let index = arr.indexOf(item);
+        // let itemTerm = item;
+        itemTerm.quantity += 1;
+        itemTerm.total = itemTerm.quantity * product.price;
+        
+        arr[index] = itemTerm;
+        localStorage.setItem('cartItems', JSON.stringify(arr));
+        //  = 
+
+      }
+      else {
+        arr.push(itemAdd);
+        localStorage.setItem('cartItems', JSON.stringify(arr));
+      }
+    }
+    else {
+      arr.push(itemAdd);
+      localStorage.setItem('cartItems', JSON.stringify(arr));
+    }
+    // arr.push(product);
+    // localStorage.setItem('cartItems', JSON.stringify(arr));
 
    
  }

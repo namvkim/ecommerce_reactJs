@@ -9,8 +9,8 @@ class AppAdmin extends Component {
             <Router>
                <div className="layout_header_admin">
                    <Header/>
-                   <div class="layout_header_main_admin">
-                    <ul class="layout_header_menu_admin">
+                   <div className="layout_header_main_admin">
+                    <ul className="layout_header_menu_admin">
                         <a ><Link to="/admin">ORDER MANAGEMENT</Link></a>
                         <a ><Link to="/listProduct">LIST PRODUCT</Link></a>
                         <a ><Link to="/userManagement">USER MANAGEMENT</Link></a>  

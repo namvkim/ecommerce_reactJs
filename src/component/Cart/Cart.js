@@ -5,7 +5,16 @@ import util from '../../util';
 
 
 
- function increaseQuantity(items,index,id){
+
+
+
+
+
+
+class Cart extends Component {
+
+  
+  increaseQuantity(items,index,id){
   
   const cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
@@ -22,7 +31,9 @@ import util from '../../util';
 
 };
 
-function decreaseQuantity(items,index,id){
+
+
+ decreaseQuantity(items,index,id){
   
   const cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
@@ -39,24 +50,49 @@ function decreaseQuantity(items,index,id){
  
 };
 
-function removeFromCart(items, product)  {
-  const cartItems = items.slice().filter((a) => a.id !== product.id);
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
- 
-};
-
-
-
-
-class Cart extends Component {
+  removeFromCart = (id) => {
+    if(localStorage.getItem('cartItems')) {
+      const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+      cartItems.find(item =>{
+        console.log(item);
+        if(item.id === id){
+          let index = cartItems.indexOf(item);
+          cartItems.splice(index,1);
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        }
+      })
+    }
+  };
+  
   render() {
-    const  cartItems  = JSON.parse(localStorage.getItem("cartItems"));
+    let cartItems = [];
+    let cartTerm = [];
+    if(localStorage.getItem('cartItems')) {
+      cartItems = JSON.parse(localStorage.getItem("cartItems"));
+      if(localStorage.getItem('products')) {
+        const products = JSON.parse(localStorage.getItem('products'));
+        cartItems.map( item => {
+          products.find( product => {
+            if(product.id === item.id) {
+              let itemTerm = {
+                id: product.id,
+                name: product.name,
+                img: product.pics[0],
+                unitPrice: product.price,
+                quantity: item.quantity,
+                totalPrice: item.total,
+              }
+              cartTerm.push(itemTerm);
+            }
+          })
+        })
+      }
+    }
    
   
     return (
       <div className="alert alert-light" >
-        
-        {cartItems.length === 0 ? (
+        {cartTerm.length === 0 ? (
           "Basket is empty"
         ) : (
           <div>
@@ -64,7 +100,7 @@ class Cart extends Component {
             <hr />
           </div>
         )}
-        {cartItems.length > 0 && ( 
+        {cartTerm.length > 0 && ( 
             
             <div className="row">
             <div className="col-md-12">
@@ -82,20 +118,20 @@ class Cart extends Component {
                 </thead>
                 <tbody>
                 {
-                    cartItems.map((item,index)=>{
+                    cartTerm.map((item,index)=>{
                         return(
-                            <tr key={index}>    
+                          <tr key={index}>    
                             <td><input type="checkbox"  style={{padding:'5px 10px'}}></input></td>
                             <td>{item.name}</td>
-                            <td><img src={item.pics[0]} style={{width:'100px',height:'80px'}}/></td>
-                            <td>{item.price} $</td>
+                            <td><img src={item.img} style={{width:'100px',height:'80px'}}/></td>
+                            <td>${item.unitPrice}</td>
                             <td>
-                                    <span className="btn btn-primary" style={{margin:'2px'}} onClick={(e)=>{decreaseQuantity(item,index,item.id)}}>-</span>
-                                    <span className="btn btn-info">{item.count}</span>
-                                    <span className="btn btn-primary" style={{margin:'2px'}} onClick={(e)=>{increaseQuantity(item,index,item.id)}}>+</span>
+                                    <span className="btn btn-primary" style={{margin:'2px'}} onClick={this.decreaseQuantity(item,index,item.id)}>-</span>
+                                    <span className="btn btn-info">{item.quantity}</span>
+                                    <span className="btn btn-primary" style={{margin:'2px'}} onClick={this.increaseQuantity(item,index,item.id)}>+</span>
                             </td>
-                            <td>{ TotalPrice(item.price,item.count)} $</td>
-                            <td><i className="badge badge-danger" onClick={(e) =>{removeFromCart(cartItems, item)}}> Delete</i></td>
+                            <td>${item.totalPrice}</td>
+                            <td><button className="badge badge-danger" onClick={() => this.removeFromCart(item.id)}> Delete</button></td>
                         </tr>
                         )
                     })
@@ -108,9 +144,6 @@ class Cart extends Component {
               )} </td>
                     <td className="btn btn-warning" style={{padding:'5px 15px'}}> Book</td>
                 </tr>
-               
-                    
-               
                 </tbody>
               
             </table>

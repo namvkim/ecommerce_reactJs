@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Header from '../layout/layout_header';
+// import Header from './Header/Header';
+
 import rout from './rout.js';
 
 class AppAdmin extends Component {

@@ -82,7 +82,7 @@ class Danggiao extends Component {
                   <th>Số lượng</th>
                   <th>Tổng</th>
                 </tr>
-                {/* <tr id="demo" className="collapse">
+                <tr id="demo" className="collapse">
                   <td>
                     {this.state.users.map((user) => {
                       return (
@@ -110,8 +110,14 @@ class Danggiao extends Component {
                     }
                   </td>
                   <td>{orders.orders_details[0].quantity}</td>
-                  <td> chưa biết 200 VND</td>
-                </tr> */}
+                  <td> {this.state.products.map((products) => {
+                      return (
+                        <p>{orders.orders_details[0].id_pro === products.id ? products.price *orders.orders_details[0].quantity: null}</p>
+                      )
+                    }
+                    )
+                    }</td>
+                </tr>
 
               </table>
             </div>

@@ -13,15 +13,32 @@
 .book_content_a li{
     color:black;
 }
-.book_content_b {
+/* .book_content_b {
     width: 200vh;
     min-height: 80vh;
     /* //margin-top: 20px; */
-    background-color:  #2c3e50;
-    padding-top: 20px;
-    margin: 0 auto;
+    /* background-color:  #2c3e50; */
+    /* padding-top: 20px; */
+    /* margin:  auto; */
+    /* color:black; 
+} */
+.book_body {
+    text-align: center;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://media.metrip.vn/images/cidre-3-2048-1459002815059-234-0-1136-2048-crop-1459002866249.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    width: 200vh;
+    min-height: 80vh;
     color:black;
 
+}
+
+.class_table_order{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
 }
 
 .book_content_user {
@@ -361,3 +378,47 @@ div.scroll {
   .display{
       display: flex;
   }
+
+
+/*   
+.ab {
+    display: flex; /* the default for span */
+    /* margin: 10px;
+    padding: 5px;
+  }
+  .modal_detail_order{
+    margin: 10px;
+    padding: 5px;
+  }
+  .modal_detail_center_order{
+      text-align: center;
+  }
+  .example_detail_order {
+      width: 1000px;
+      height: 250px;
+      overflow-y: scroll; 
+    }
+     */
+    /* Hide scrollbar for Chrome, Safari and Opera 
+    .example_detail_order::-webkit-scrollbar {
+        display: none;
+    }
+
+    .modal-content-detail-order {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;*/
+        /* width: 100%; 
+        pointer-events: auto;
+        background-color:rgb(243, 239, 233);
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: .3rem;
+        outline: 0;
+    } */
+
+    .btn_xn{
+        width: 86px;
+    }

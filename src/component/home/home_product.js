@@ -97,7 +97,7 @@ class Home_product extends Component {
               <button className="index_tab-pane_btn" onClick={() => this.addToCart(product)}>Add to cart </button>
               {/* <button className="index_tab-pane_btn">Detail</button> */}
 
-              <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
+              <button onClick={()=>this.detail(product.id)} className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
           Detail
         </button>
 
@@ -118,7 +118,7 @@ class Home_product extends Component {
             <div className="index_tab-pane_row_right">
               <p className="index_tab-pane_price">{product.price} VND</p>
               <button className="index_tab-pane_btn" onClick={() => this.addToCart(product)}>Add to cart</button>
-              <button  className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
+              <button onClick={()=>this.detail(product.id)} className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
           Detail
         </button>
             </div>
@@ -146,6 +146,7 @@ class Home_product extends Component {
                 <div className="modal_detail"> 
                 <img src={pro.pics[0]} alt="" width="200" height="200"/>           
                   <p className="modal_detail_center">{pro.price} VND</p>
+                  <button className="index_tab-pane_btn" onClick={() => this.addToCart(pro)}>Add to cart</button>
                 </div>          
                 <div className="modal_detail example_detail">{pro.describes}</div>
               </div>

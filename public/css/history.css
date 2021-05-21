@@ -1,0 +1,32 @@
+.history{
+    display: flex;
+    justify-content: center;
+}
+
+.history a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(141, 89, 24);
+    padding: 10px 30px;
+    margin: 20px 20px;
+}
+
+.his_color{
+    color: black;
+}
+
+.tbl_his1{
+    margin: 0 auto;
+    width: 80%;
+    color: white;
+}
+
+table, th, td {  
+    border: 1px solid pink;  
+    border-collapse: collapse;  
+}  
+th, td {  
+    padding: 10px;  
+}  

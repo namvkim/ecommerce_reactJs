@@ -1,69 +1,34 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import routes_his from "./routes_his";
 
 class History extends Component {
+  showContentMenu = (routes) => {
+    var result = null;
+    if (routes.length > 0) {
+      result = routes.map((route, index) => {
+        return (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        );
+      });
+    }
+    return result;
+  };
   render() {
     return (
-      <div className="row" style={{ marginTop: "4rem", color: "black" }}>
-        <div className="col-sm-3">
-          <div className="card" style={{ width: "16rem" }}>
-            <img
-              className="card-img-top"
-              src="images/customer.png"
-              style={{ width: "5rem", height: "5rem", margin: "auto auto" }}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <h5 className="card-title" style={{ color: "black" }}>
-                Chờ xác nhận
-              </h5>
-            </div>
-          </div>
+      <Router>
+        <div className="history">
+          <Link to="/history">PREPARATION</Link>
+          <Link to="/delivery">DELIVERY</Link>
+          <Link to="/delivered">DELIVERED</Link>
         </div>
-        <div className="col-sm-3">
-          <div className="card" style={{ width: "16rem" }}>
-            <img
-              className="card-img-top"
-              src="images/box.png"
-              style={{ width: "5rem", height: "5rem", margin: "auto auto" }}
-            ></img>
-            <div className="card-body">
-              <h5 className="card-title" style={{ color: "black" }}>
-                Chờ lấy hàng
-              </h5>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-sm-3">
-          <div className="card" style={{ width: "16rem" }}>
-            <img
-              className="card-img-top"
-              src="images/delivery-truck.png"
-              style={{ width: "5rem", height: "5rem", margin: "auto auto" }}
-            ></img>
-            <div className="card-body">
-              <h5 className="card-title" style={{ color: "black" }}>
-                Đang giao
-              </h5>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-sm-3">
-          <div className="card" style={{ width: "16rem" }}>
-            <img
-              className="card-img-top"
-              src="images/deliveryman.png"
-              style={{ width: "5rem", height: "5rem", margin: "auto auto" }}
-            ></img>
-            <div className="card-body">
-              <h5 className="card-title" style={{ color: "black" }}>
-                Đã giao hàng
-              </h5>
-            </div>
-          </div>
-        </div>
-      </div>
+        <Switch>{this.showContentMenu(routes_his)}</Switch>
+      </Router>
     );
   }
 }

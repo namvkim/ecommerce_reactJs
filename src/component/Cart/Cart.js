@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-
 import util from "../../util";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class Cart extends Component {
+  total=0;
   constructor(props) {
     super(props)
     this.state = {
@@ -11,28 +11,27 @@ class Cart extends Component {
     };
   };
   
-  increaseQuantity(items, index, id) {
+  increaseQuantity=(items, index, id)=>{
     const cartItems = JSON.parse(localStorage.getItem("cartItems"));
-
-    let productAlreadyInCart = false;
+    let productAlreadyInCart = false; 
     cartItems.forEach((item) => {
       if (item.id === id) {
-        cartItems[index].count += 1;
+        cartItems[index].quantity += 1;
+        this.setState({total: this.state.total+item.unitPrice});         
         productAlreadyInCart = true;
       }
     });
-
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }
 
-  decreaseQuantity(items, index, id) {
+  decreaseQuantity=(items, index, id)=> {
     const cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
     let productAlreadyInCart = false;
     cartItems.forEach((item) => {
-      if (item.id === id) {
-        cartItems[index].count -= 1;
-
+      if (item.id === id&&cartItems[index].quantity >0) {
+        cartItems[index].quantity -= 1;
+        this.setState({total: this.state.total-item.unitPrice});         
         productAlreadyInCart = true;
       }
     });
@@ -44,15 +43,19 @@ class Cart extends Component {
     if (localStorage.getItem("cartItems")) {
       const cartItems = JSON.parse(localStorage.getItem("cartItems"));
       cartItems.find((item) => {
-        console.log(item);
         if (item.id === id) {
           let index = cartItems.indexOf(item);
           cartItems.splice(index, 1);
           localStorage.setItem("cartItems", JSON.stringify(cartItems));
+          this.setState({total: this.state.total-item.unitPrice*item.quantity});         
         }
       });
     }
   };
+
+  componentDidMount(){
+    this.setState({total: this.total});
+  }
 
   render() {
     let cartItems = [];
@@ -73,14 +76,14 @@ class Cart extends Component {
                 totalPrice: item.total,
               };
               cartTerm.push(itemTerm);
+              this.total+=itemTerm.unitPrice*itemTerm.quantity;
             }
           });
         });
       }
     }
-
     return (
-      <div className="alert alert-light">
+      <div className="cart_content_table">
         {cartTerm.length === 0 ? (
           "Basket is empty"
         ) : (
@@ -127,7 +130,7 @@ class Cart extends Component {
                           <span
                             className="btn btn-primary"
                             style={{ margin: "2px" }}
-                            onClick={this.decreaseQuantity(
+                            onClick={()=>this.decreaseQuantity(
                               item,
                               index,
                               item.id
@@ -139,7 +142,7 @@ class Cart extends Component {
                           <span
                             className="btn btn-primary"
                             style={{ margin: "2px" }}
-                            onClick={this.increaseQuantity(
+                            onClick={()=>this.increaseQuantity(
                               item,
                               index,
                               item.id
@@ -187,8 +190,5 @@ class Cart extends Component {
   }
 }
 
-function TotalPrice(price, tonggia) {
-  return Number(price * tonggia).toLocaleString("en-US");
-}
 
 export default Cart;

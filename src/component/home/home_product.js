@@ -91,14 +91,10 @@ class Home_product extends Component {
               </button>
               {/* <button className="index_tab-pane_btn">Detail</button> */}
 
-              <button
-                className="btn index_tab-pane_btn"
-                data-toggle="modal"
-                data-target="#exampleModalCenter"
-                onClick={()=>this.detail(product.id)}
-              >
-                Detail
-              </button>
+              <button onClick={()=>this.detail(product.id)} className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
+          Detail
+        </button>
+
             </div>
           </div>
         );
@@ -114,20 +110,10 @@ class Home_product extends Component {
             </div>
             <div className="index_tab-pane_row_right">
               <p className="index_tab-pane_price">{product.price} VND</p>
-              <button
-                className="index_tab-pane_btn"
-                onClick={() => this.addToCart(product)}
-              >
-                Add to cart
-              </button>
-              <button
-                className="btn index_tab-pane_btn "
-                data-toggle="modal"
-                data-target="#exampleModalCenter"
-                onClick={()=>this.detail(product.id)}
-              >
-                Detail
-              </button>
+              <button className="index_tab-pane_btn" onClick={() => this.addToCart(product)}>Add to cart</button>
+              <button onClick={()=>this.detail(product.id)} className="btn index_tab-pane_btn " data-toggle="modal" data-target="#exampleModalCenter">
+          Detail
+        </button>
             </div>
           </div>
         );
@@ -135,61 +121,35 @@ class Home_product extends Component {
 
     return (
       <div className="index_content_menu">
-        {this.state.products.map((pro, a) => {
-          if (pro.id === this.state.kt)
-            return (
-              <div
-                className="modal fade"
-                id="exampleModalCenter"
-                tabIndex={-1}
-                role="dialog"
-                aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true"
-              >
-                <div
-                  className="modal-dialog modal-dialog-centered"
-                  role="document"
-                >
-                  <div className="modal-content-detail">
-                    <div className="modal-header">
-                      <h5 className="modal-title" id="exampleModalLongTitle">
-                        {pro.name}
-                      </h5>
-                      <button
-                        type="button"
-                        className="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div className="modal-body a">
-                      <div className="modal_detail">
-                        <img
-                          src={pro.pics[0]}
-                          alt=""
-                          width="200"
-                          height="200"
-                        />
-                        <p className="modal_detail_center">{pro.price} VND</p>
-                      </div>
-                      <div className="modal_detail example_detail">
-                        {pro.describes}
-                      </div>
-                    </div>
-                    <div className="modal-footer">
-                      <button
-                        type="button"
-                        className="btn btn-secondary"
-                        data-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
+        
+        {
+          this.state.products.map((pro,a)=>{
+         if(pro.id===this.state.kt)
+            return(
+              <div className="modal fade" id="exampleModalCenter" tabIndex={-1} role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div className="modal-dialog modal-dialog-centered" role="document">
+            <div className="modal-content-detail" >
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLongTitle">{pro.name}</h5>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
               </div>
+              <div className="modal-body a">         
+                <div className="modal_detail"> 
+                <img src={pro.pics[0]} alt="" width="200" height="200"/>           
+                  <p className="modal_detail_center">{pro.price} VND</p>
+                  <button className="index_tab-pane_btn" onClick={() => this.addToCart(pro)}>Add to cart</button>
+                </div>          
+                <div className="modal_detail example_detail">{pro.describes}</div>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-dismiss="modal" >Close</button>
+              </div>
+              </div>
+              </div>
+              </div>
+
             );
         })}
 

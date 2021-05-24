@@ -39,7 +39,6 @@ class Sign_in extends Component {
         alert("your account has been locked ^.^");
       } else {
         localStorage.setItem("user", JSON.stringify(result))
-        window.location.reload();
     };
     } else alert("Incorrect account or password !!");
   };

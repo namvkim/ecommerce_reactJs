@@ -151,7 +151,7 @@ class Cart extends Component {
                             +
                           </span>
                         </td>
-                        <td>${item.totalPrice}</td>
+                        <td>${item.quantity*item.unitPrice}</td>
                         <td>
                           <button
                             className="badge badge-danger"

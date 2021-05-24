@@ -4,6 +4,7 @@ import Layout_footer from "./component/layout/layout_footer";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import routes from "./routes";
 import Login_main from "./component/login/login_main";
+import Booking from "./component/Cart/Booking";
 
 class App extends Component {
   showContentMenu = (routes) => {
@@ -41,7 +42,8 @@ class App extends Component {
         </div>
         <div className="layout_body">
           <div className="layout_content">
-            <Switch>{this.showContentMenu(routes)}</Switch>
+            {/* <Switch>{this.showContentMenu(routes)}</Switch> */}
+            <Booking/>
           </div>
         </div>
         <Layout_footer />

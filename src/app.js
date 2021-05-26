@@ -42,8 +42,8 @@ class App extends Component {
         </div>
         <div className="layout_body">
           <div className="layout_content">
-            {/* <Switch>{this.showContentMenu(routes)}</Switch> */}
-            <Booking/>
+            <Switch>{this.showContentMenu(routes)}</Switch>
+            {/* <Booking/> */}
           </div>
         </div>
         <Layout_footer />

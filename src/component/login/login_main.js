@@ -13,7 +13,7 @@ class Login_main extends Component {
 
   componentDidMount(){
     this.setState({user: JSON.parse(localStorage.getItem("user"))})
-    if (this.state.user!=null) {
+    if (localStorage.getItem("user")!=null) {
       document.getElementById('log_out').style.display='block';
       document.getElementById('log_in').style.display='none';
     }else{

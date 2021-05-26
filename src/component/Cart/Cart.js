@@ -176,8 +176,8 @@ class Cart extends Component {
                     <td
                       className="btn btn-warning"
                       style={{ padding: "5px 15px" }}
-                    >                     
-                      Book
+                    >       
+                      <Link to="/booking">Book</Link>            
                     </td>
                   </tr>
                 </tbody>

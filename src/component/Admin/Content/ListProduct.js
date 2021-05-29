@@ -159,10 +159,10 @@ render() {
 
             </div>
             <div class="form-sub-w3">
-              <input type="number" name="price" placeholder="Giá" value={this.state.price} onChange={this.onChange} required="" />
+              <input type="number" name="price" placeholder="Giá" value={this.state.action==='UPDATE'?this.state.price:null} onChange={this.onChange} required="" />
             </div>
             <div class="form-sub-w3">
-              <input type="file" name="pics" ref={(input) => { this.pics= input }} placeholder="" onChange={this.onChange} required="" />
+              <input type="file" name="pics" ref={(input) => { this.pics= input }}  placeholder="" onChange={this.onChange} required="" />
             </div>
             <div class="form-sub-w3 class_pro_radio" >
 

@@ -186,7 +186,7 @@
     },
     {
       "id": 3,
-      "id_user": 1,
+      "id_user": 4,
       "date": "12/5/2020",
       "status": 2,
       "orders_details": [
@@ -204,7 +204,7 @@
     },
     {
       "id": 4,
-      "id_user": 1,
+      "id_user": 2,
       "date": "10/5/2020",
       "status": 3,
       "orders_details": [

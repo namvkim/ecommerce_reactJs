@@ -152,6 +152,7 @@
       "id": 1,
       "id_user": 1,
       "date": "11/5/2020",
+      "address":"Bình Định",
       "status": 1,
       "orders_details": [
         {
@@ -170,6 +171,7 @@
       "id": 2,
       "id_user": 1,
       "date": "20/5/2020",
+      "address":"Quảng Trị",
       "status": 1,
       "orders_details": [
         {
@@ -179,15 +181,16 @@
         },
         {
           "id": 2,
-          "id_pro": 1,
+          "id_pro": 1, 
           "quantity": 2
         }
       ]
     },
     {
       "id": 3,
-      "id_user": 4,
+      "id_user": 1,
       "date": "12/5/2020",
+      "address":"Vĩnh Kim-Vĩnh Linh-Quảng Trị",
       "status": 2,
       "orders_details": [
         {
@@ -204,8 +207,9 @@
     },
     {
       "id": 4,
-      "id_user": 2,
+      "id_user": 1,
       "date": "10/5/2020",
+      "address":"Quảng Trị",
       "status": 3,
       "orders_details": [
         {
@@ -259,7 +263,7 @@
     },
     {
       "id": 4,
-      "content": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzN_zDZ4Bf8bFfmv60dGSIJyj2o1mMP8GyexgL8ff2GI2JeFDtSGS6hfXQoKn3cIUufNA&usqp=CAU"
+      "content": "https://media.cooky.vn/images/blog-2016/nghe-thuat-trinh-bay-va-chup-anh-mon-an%208.jpg"
     },
     {
       "id": 5,
@@ -267,11 +271,11 @@
     },
     {
       "id": 6,
-      "content": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrtjQ-NwmS8ytaM34Xb7YhGYH7wUSX8c1342cFxy25sLwSRLlIB50NzPITgMmJzm8_JRQ&usqp=CAU"
+      "content": "https://nhathuoclongchau.com/upload/post/44108/images/tac-hai-cua-an-vat-ma-ban-chua-biet4.jpg"
     },
     {
       "id": 7,
-      "content": "https://halotravel.vn/wp-content/uploads/2020/03/huong-dan-chup-anh-do-an-bang-dien-thoai-11.jpg"
+      "content": "https://rgb.vn/wp-content/uploads/2016/05/nghe-thuat-chup-anh-mon-an-loi-cuon-022.jpg"
     },
     {
       "id": 8,

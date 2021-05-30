@@ -46,7 +46,7 @@ class Sign_in extends Component {
   render() {
     return (
       <div id="login">
-        <form className="form">
+        <form className="form" action="http://localhost:3001">
           <p className="fieldset">
             <label className="image-replace email" htmlFor="signin-email">
               E-mail

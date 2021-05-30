@@ -7,7 +7,7 @@ class Login_main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user:{}
+      user:{},
     };
   }
 
@@ -24,9 +24,12 @@ class Login_main extends Component {
 
   logOut=()=>{
     localStorage.removeItem('user');
+    document.getElementById('log_out').style.display='none';
+    document.getElementById('log_in').style.display='block';
   }
 
   render() {
+    console.log("render");
     return (
       <div className="login_main">
         <div id="log_out"  style={{display: 'none'}}>
@@ -60,9 +63,6 @@ class Login_main extends Component {
             <Sign_in />
             <Sign_up />
             <Reset />
-            {/* <a href="#0" className="close-form">
-              Close
-            </a> */}
           </div>
         </div>
       </div>

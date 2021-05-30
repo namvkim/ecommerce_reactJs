@@ -23,22 +23,6 @@ class Reset extends Component {
         alert(err);
       });
   }
-
-//   sign_in = () => {
-//     let email = document.getElementById("signin-email").value;
-//     let pass = document.getElementById("signin-password").value;
-//     this.callAPI(this.url_users, "GET", "");
-//     const result = this.state.result.find(
-//       (row) => row.email == email && row.pass == pass
-//     );
-//     console.log(result);
-//     if (result != null) {
-//       if (result.status == 0) {
-//         alert("your account has been locked ^.^");
-//       } else localStorage.setItem("user", JSON.stringify(result));
-//     } else alert("Incorrect account or password !!");
-//   };
-
   render() {
     return (
       <div id="reset-password">
@@ -57,9 +41,7 @@ class Reset extends Component {
               type="email"
               placeholder="E-mail"
             />
-            {/* <span className="error-message">
-              An account with this email does not exist!
-            </span> */}
+         
           </p>
           <p className="fieldset">
             <input

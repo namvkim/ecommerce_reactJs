@@ -60,7 +60,7 @@ class Sign_up extends Component {
   render() {
     return (
       <div id="signup">
-        <form className="form">
+        <form className="form" action="http://localhost:3001">
           <p className="fieldset">
             <label className="image-replace username" htmlFor="signup-username">
               Username
@@ -110,7 +110,7 @@ class Sign_up extends Component {
             <input
               className="full-width has-padding has-border"
               id="signup-phone"
-              type="number"
+              type="text"
               placeholder="Phone"
               name="phone"
               onChange={this.onChange}

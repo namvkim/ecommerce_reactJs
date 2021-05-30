@@ -1,158 +1,77 @@
 import React, { Component } from "react";
-import util from "../../util";
+import { Link } from "react-router-dom";
 
 class Booking extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
   render() {
     const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    const user = JSON.parse(localStorage.getItem("user"));
+    const products = JSON.parse(localStorage.getItem("products"));
+    let i=1;
+    let total=0;
+    let element = cartItems.map((row, index) => {
+      if (row.checked){
+        let product;
+        products.map((row2)=>{
+          if(row.id==row2.id) product= row2;
+        })
+        total+=product.price*row.quantity;
+        return (
+          <tr key={index}>
+            <td>{i++}</td>
+            <td>{product.name}</td>
+            <td><img src={product.pics[0]}></img></td>
+            <td>{product.price}</td>
+            <td>{row.quantity}</td>
+            <td>{product.price*row.quantity}</td>
+          </tr>
+        );
+      }
+    });
 
     return (
-      <div className="row" style={{ color: "blue" }}>
-        <div className="col-md-5 col-sm-5">
-          <div className="panel panel-primary">
-            <div className="panel-heading">
-              <h4 style={{ color: "red" }}> Thông tin giao hàng</h4>
+      <div className="booking_main">
+        <form method="POST" action="">
+          <div className="booking_info">
+            <div className="info_left">
+              Name: <input type="text" defaultValue={user.name} />
+              <br />
+              Phone: <input type="text" defaultValue={user.phone} />
             </div>
-            <div className="panel-body">
-              <form name="form" method="post">
-                <div className="form-group">
-                  <label style={{ color: "black" }}>
-                    Email <span style={{ color: "red" }}> * </span>
-                  </label>
-                  <input
-                    name="email"
-                    type="email"
-                    className="form-control"
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label style={{ color: "black" }}>
-                    Address <span style={{ color: "red" }}> * </span>
-                  </label>
-                  <input
-                    name="text"
-                    type="text"
-                    className="form-control"
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label style={{ color: "black" }}>
-                    Phone Number <span style={{ color: "red" }}> * </span>{" "}
-                  </label>
-                  <input
-                    name="phone"
-                    type="text"
-                    className="form-control"
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label style={{ color: "black" }}>
-                    Hình thức thanh toán{" "}
-                    <span style={{ color: "red" }}> * </span>{" "}
-                  </label>
-                  <select style={{ color: "black" }}>
-                    <option style={{ color: "black" }}>
-                      Thanh toán bằng tiền mặt
-                    </option>
-                    <option style={{ color: "black" }}>
-                      Thanh toán bằng hình thức chuyển khoản
-                    </option>
-                  </select>
-                </div>
-              </form>
+            <div className="info_right">
+              Address: <br />
+              <textarea rows={2} cols={70} defaultValue={user.address} />
             </div>
           </div>
-        </div>
-
-        <div className="col-md-7 col-sm-7">
-          <div className="panel panel-primary">
-            <div className="panel-heading">
-              <h4 style={{ color: "red" }}> Thông tin sản phẩm</h4>
-            </div>
-            <div className="panel-body">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th style={{ color: "black" }}>Name</th>
-                    <th style={{ color: "black" }}>Price</th>
-                    <th style={{ color: "black" }}>Quantity</th>
-                    <th style={{ color: "black" }}>Total Price</th>
-                    <th style={{ color: "black" }}></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cartItems.map((item, key) => {
-                    return (
-                      <tr key={key}>
-                        <td style={{ color: "black" }}>{item.title}</td>
-
-                        <td style={{ color: "black" }}>{item.price} $</td>
-                        <td style={{ color: "black" }}>{item.count}</td>
-                        <td style={{ color: "black" }}>
-                          {TotalPrice(item.price, item.count)} $
-                        </td>
-                      </tr>
-                    );
-                  })}
-                  <tr>
-                    <td
-                      colSpan="3"
-                      style={{ fontWeight: "bold" }}
-                      style={{ color: "black" }}
-                    >
-                      Total Carts
-                    </td>
-                    <td
-                      style={{ fontWeight: "bold", color: "red" }}
-                      style={{ color: "black" }}
-                    >
-                      {" "}
-                      <b style={{ color: "black" }}>
-                        {util.formatCurrency(
-                          cartItems.reduce((a, c) => a + c.price * c.count, 0)
-                        )}
-                      </b>{" "}
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td></td>
-
-                    <td colSpan="2">
-                      <button
-                        className="btn btn-info"
-                        style={{
-                          width: "10rem",
-                          borderRadius: 20,
-                          margin: "auto auto",
-                        }}
-                        onClick={() =>
-                          alert("Thank you so much. You book successfully")
-                        }
-                      >
-                        {" "}
-                        Payment
-                      </button>
-                    </td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+        </form>
+        <table className="booking_table">
+          <tbody>
+            <tr>
+              <th>STT</th>
+              <th>Name</th>
+              <th>Image</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total Price</th>
+            </tr>
+            {element}
+            <tr>
+              <td colSpan="5">Total</td>
+              <td>{total}</td>
+            </tr>
+          </tbody>
+        </table>
+        <Link to="/cart">
+          <button className="booking_cancel">Back</button>
+        </Link>
+        <button className="booking_ok">Booking</button>
       </div>
     );
   }
 }
-
-function TotalPrice(price, tonggia) {
-  return Number(price * tonggia).toLocaleString("en-US");
-}
-
 export default Booking;

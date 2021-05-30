@@ -1,0 +1,35 @@
+.booking_main{
+    color: white;
+    font-size: 18px;
+}
+
+.booking_main input{
+    width: 80%;
+    margin-top: 20px;
+}
+
+.booking_info{
+    display: flex;
+}
+
+.info_left{
+    width: 40%;
+}
+
+.info_right{
+    width: 60%;
+    margin-top: 16px;
+}
+
+.booking_table{
+    margin: 30px auto;
+}
+
+.booking_table img{
+    height: 50px;
+}
+
+.booking_main button{
+    padding: 10px 50px;
+    margin: 0 20px;
+}

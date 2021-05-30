@@ -1,43 +1,44 @@
 import React, { Component } from "react";
 import util from "../../util";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Booking from "./Booking";
 
 class Cart extends Component {
-  total=0;
+  total = 0;
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-       total:0,
+      total: 0,
     };
-  };
-  
-  increaseQuantity=(items, index, id)=>{
+  }
+
+  increaseQuantity = (items, index, id) => {
     const cartItems = JSON.parse(localStorage.getItem("cartItems"));
-    let productAlreadyInCart = false; 
+    let productAlreadyInCart = false;
     cartItems.forEach((item) => {
       if (item.id === id) {
         cartItems[index].quantity += 1;
-        this.setState({total: this.state.total+item.unitPrice});         
+        this.setState({ total: this.state.total + item.unitPrice });
         productAlreadyInCart = true;
       }
     });
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }
+  };
 
-  decreaseQuantity=(items, index, id)=> {
+  decreaseQuantity = (items, index, id) => {
     const cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
     let productAlreadyInCart = false;
     cartItems.forEach((item) => {
-      if (item.id === id&&cartItems[index].quantity >0) {
+      if (item.id === id && cartItems[index].quantity > 0) {
         cartItems[index].quantity -= 1;
-        this.setState({total: this.state.total-item.unitPrice});         
+        this.setState({ total: this.state.total - item.unitPrice });
         productAlreadyInCart = true;
       }
     });
 
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }
+  };
 
   removeFromCart = (id) => {
     if (localStorage.getItem("cartItems")) {
@@ -47,15 +48,23 @@ class Cart extends Component {
           let index = cartItems.indexOf(item);
           cartItems.splice(index, 1);
           localStorage.setItem("cartItems", JSON.stringify(cartItems));
-          this.setState({total: this.state.total-item.unitPrice*item.quantity});         
+          this.setState({
+            total: this.state.total - item.unitPrice * item.quantity,
+          });
         }
       });
     }
   };
 
-  componentDidMount(){
-    this.setState({total: this.total});
+  componentDidMount() {
+    this.setState({ total: this.total });
   }
+
+  check = (index) => {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+    cartItems[index].checked = !cartItems[index].checked;
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  };
 
   render() {
     let cartItems = [];
@@ -76,7 +85,7 @@ class Cart extends Component {
                 totalPrice: item.total,
               };
               cartTerm.push(itemTerm);
-              this.total+=itemTerm.unitPrice*itemTerm.quantity;
+              this.total += itemTerm.unitPrice * itemTerm.quantity;
             }
           });
         });
@@ -116,6 +125,10 @@ class Cart extends Component {
                           <input
                             type="checkbox"
                             style={{ padding: "5px 10px" }}
+                            defaultChecked={
+                              cartItems[index].checked == true ? "true" : ""
+                            }
+                            onClick={() => this.check(index)}
                           ></input>
                         </td>
                         <td>{item.name}</td>
@@ -125,16 +138,14 @@ class Cart extends Component {
                             style={{ width: "100px", height: "80px" }}
                           />
                         </td>
-                        <td>${item.unitPrice}</td>
+                        <td>{item.unitPrice}</td>
                         <td>
                           <span
                             className="btn btn-primary"
                             style={{ margin: "2px" }}
-                            onClick={()=>this.decreaseQuantity(
-                              item,
-                              index,
-                              item.id
-                            )}
+                            onClick={() =>
+                              this.decreaseQuantity(item, index, item.id)
+                            }
                           >
                             -
                           </span>
@@ -142,46 +153,41 @@ class Cart extends Component {
                           <span
                             className="btn btn-primary"
                             style={{ margin: "2px" }}
-                            onClick={()=>this.increaseQuantity(
-                              item,
-                              index,
-                              item.id
-                            )}
+                            onClick={() =>
+                              this.increaseQuantity(item, index, item.id)
+                            }
                           >
                             +
                           </span>
                         </td>
-                        <td>${item.quantity*item.unitPrice}</td>
+                        <td>{item.quantity * item.unitPrice}</td>
                         <td>
                           <button
                             className="badge badge-danger"
                             onClick={() => this.removeFromCart(item.id)}
                           >
-                            {" "}
                             Delete
                           </button>
                         </td>
                       </tr>
                     );
                   })}
-                  <tr>
-                    <td colSpan="4" style={{ fontWeight: "bold" }}>
-                      Total Carts
-                    </td>
-                    <td style={{ fontWeight: "bold", color: "red" }}>
-                      {util.formatCurrency(
-                        this.state.total
-                      )}
-                    </td>
-                    <td
-                      className="btn btn-warning"
-                      style={{ padding: "5px 15px" }}
-                    >       
-                      <Link to="/booking">Book</Link>            
-                    </td>
-                  </tr>
                 </tbody>
               </table>
+              <Link
+                to="/"
+                className="btn btn-warning mr-3"
+                style={{ padding: "5px 20px", fontSize:"20px"}}
+              >
+                Buy more
+              </Link>
+              <Link
+                to="/booking"
+                className="btn btn-warning"
+                style={{ padding: "5px 20px" ,fontSize:"20px"}}
+              >
+                Book
+              </Link>
             </div>
           </div>
         )}
@@ -189,6 +195,5 @@ class Cart extends Component {
     );
   }
 }
-
 
 export default Cart;

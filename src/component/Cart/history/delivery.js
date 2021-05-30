@@ -68,12 +68,12 @@ class Delivery extends Component {
                 type="button"
                 className="btn btn-primary"
                 data-toggle="modal"
-                data-target=".bd-example-modal-lg"
+                data-target={".bd-example-modal-lg"+i}
               >
                 Details
               </button>
               <div
-                className="modal fade bd-example-modal-lg"
+                className={"modal fade bd-example-modal-lg"+i}
                 tabIndex="-1"
                 role="dialog"
                 aria-labelledby="myLargeModalLabel"

@@ -42,7 +42,7 @@ html {
 
 .layout_header_main {
     display: flex;
-    height: 30px;
+    height: 40px;
     background-image: linear-gradient( #302719, black);
     font-weight: bold;
     min-height: 30px;

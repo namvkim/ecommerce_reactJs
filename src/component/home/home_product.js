@@ -72,6 +72,7 @@ class Home_product extends Component {
     let products_food = this.state.products.map((product, index) => {
       if (product.status === 1 && product.category === 1)
         return (
+          
           <div className="index_tab-pane_row" key={index}>
             <div className="index_tab-pane_row_left">
               <img src={product.pics[0]} alt="" />
@@ -103,7 +104,7 @@ class Home_product extends Component {
         return (
           <div className="index_tab-pane_row" key={index}>
             <div className="index_tab-pane_row_left">
-              <img src={product.pics[0]} alt="" width="100" />
+              <img src={product.pics[0]} alt="" width="100" height="200"/>
               <p className="index_tab-pane_name">{product.name}</p>
             </div>
             <div className="index_tab-pane_row_right">
@@ -277,7 +278,10 @@ class Home_product extends Component {
               role="tabpanel"
               aria-labelledby="pills-hot-tab"
             >
+              
               <div className="index_tab-pane_row">
+
+              
                 <div className="index_tab-pane_row_left">
                   <img
                     src="http://file.hstatic.net/1000372427/file/do-an-vat-cho-quan-ca-phe-tra-sua-da-nang-3_48bd4294795b43148d026b8e11c8d3d0.jpg"
@@ -320,6 +324,7 @@ class Home_product extends Component {
               role="tabpanel"
               aria-labelledby="pills-discount-tab"
             >
+              
               <div className="index_tab-pane_row">
                 <div className="index_tab-pane_row_left">
                   <img

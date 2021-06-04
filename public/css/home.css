@@ -152,9 +152,12 @@
 }
 
 .index_tab-pane_btn {
-    padding: 2px 20px;
-    background-color: #009432;
+
+    padding: 5px 15px;
+    background-color: #d18a06;
     margin: 10px;
+    color: white;
+    border-radius: 20px;
 }
 
 

@@ -34,7 +34,7 @@ class App extends Component {
                 <Link to="/">HOME PAGE</Link>
                 <Link to="/history">HISTORY</Link>
                 <Link to="/">RECRUITMENT</Link>
-                <Link to="/">CONTACT</Link>
+                <Link to="/contact">CONTACT</Link>
                 <Link to="/cart"><i className="fas fa-cart-plus" />CART</Link>
             </ul>
             <Login_main />

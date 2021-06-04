@@ -145,6 +145,15 @@
       "address": "Quảng Trị",
       "status": 1,
       "id": 4
+    },
+    {
+      "name": "xanh",
+      "pass": "1234Xanh",
+      "phone": "34356776",
+      "email": "xanh.tran22@student.passerellesnumeriques.org",
+      "address": "Da Nang",
+      "status": 1,
+      "id": 5
     }
   ],
   "orders": [
@@ -152,7 +161,7 @@
       "id": 1,
       "id_user": 1,
       "date": "11/5/2020",
-      "address":"Bình Định",
+      "address": "Bình Định",
       "status": 1,
       "orders_details": [
         {
@@ -171,7 +180,7 @@
       "id": 2,
       "id_user": 1,
       "date": "20/5/2020",
-      "address":"Quảng Trị",
+      "address": "Quảng Trị",
       "status": 1,
       "orders_details": [
         {
@@ -181,7 +190,7 @@
         },
         {
           "id": 2,
-          "id_pro": 1, 
+          "id_pro": 1,
           "quantity": 2
         }
       ]
@@ -190,7 +199,7 @@
       "id": 3,
       "id_user": 1,
       "date": "12/5/2020",
-      "address":"Vĩnh Kim-Vĩnh Linh-Quảng Trị",
+      "address": "Vĩnh Kim-Vĩnh Linh-Quảng Trị",
       "status": 2,
       "orders_details": [
         {
@@ -209,7 +218,7 @@
       "id": 4,
       "id_user": 1,
       "date": "10/5/2020",
-      "address":"Quảng Trị",
+      "address": "Quảng Trị",
       "status": 3,
       "orders_details": [
         {
@@ -223,6 +232,205 @@
           "quantity": 1
         }
       ]
+    },
+    {
+      "id_user": 5,
+      "date": "3/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 6,
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "id_pro": 7,
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "id_pro": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 5
+    },
+    {
+      "id_user": 5,
+      "date": "3/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 6,
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "id_pro": 7,
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "id_pro": 1,
+          "quantity": 2
+        }
+      ],
+      "id": 6
+    },
+    {
+      "id_user": 5,
+      "date": "3/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 6,
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "id_pro": 7,
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "id_pro": 1,
+          "quantity": 2
+        }
+      ],
+      "id": 7
+    },
+    {
+      "id_user": 5,
+      "date": "3/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 6,
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "id_pro": 7,
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "id_pro": 1,
+          "quantity": 2
+        }
+      ],
+      "id": 8
+    },
+    {
+      "id_user": 5,
+      "date": "3/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 6,
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "id_pro": 1,
+          "quantity": 2
+        }
+      ],
+      "id": 9
+    },
+    {
+      "id_user": 5,
+      "date": "3/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 7,
+          "quantity": 2
+        }
+      ],
+      "id": 10
+    },
+    {
+      "id_user": 5,
+      "date": "3/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 11
+    },
+    {
+      "id_user": 5,
+      "date": "4/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 12
+    },
+    {
+      "id_user": 5,
+      "date": "4/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 13
+    },
+    {
+      "id_user": 5,
+      "date": "4/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 14
+    },
+    {
+      "id_user": 5,
+      "date": "4/6/2021",
+      "address": "Da Nang",
+      "status": 1,
+      "orders_details": [
+        {
+          "id": 1,
+          "id_pro": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 15
     }
   ],
   "cart": [

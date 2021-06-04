@@ -463,3 +463,7 @@
     position: absolute;
     right: 0;
 }
+
+.code{
+    display: none;
+}

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Header from '../layout/layout_header';
-// import Header from './Header/Header';
-
 import rout from './rout.js';
 
 class AppAdmin extends Component {
@@ -13,11 +11,10 @@ class AppAdmin extends Component {
                    <Header/>
                    <div className="layout_header_main_admin">
                     <ul className="layout_header_menu_admin">
-                        <a ><Link to="/admin">ORDER MANAGEMENT</Link></a>
-                        <a ><Link to="/listProduct">LIST PRODUCT</Link></a>
-                        <a ><Link to="/userManagement">USER MANAGEMENT</Link></a>  
-                        <a className="main-admin"><Link >ADMIN</Link></a>  
-
+                        <Link to="/admin">ORDER MANAGEMENT</Link>
+                        <Link to="/listProduct">LIST PRODUCT</Link>
+                        <Link to="/userManagement">USER MANAGEMENT</Link>
+                        <Link className="main-admin" to="#">ADMIN</Link> 
                     </ul>                                                               
                    </div>
                     <div>

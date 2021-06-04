@@ -152,7 +152,7 @@
       "id": 1,
       "id_user": 1,
       "date": "11/5/2020",
-      "address":"Bình Định",
+      "address": "101B Lê Hữu Trác, Sơn Trà, Đà Nẵng",
       "status": 1,
       "orders_details": [
         {
@@ -171,7 +171,7 @@
       "id": 2,
       "id_user": 1,
       "date": "20/5/2020",
-      "address":"Quảng Trị",
+      "address": "99 Tô Hiến Thành",
       "status": 1,
       "orders_details": [
         {
@@ -181,7 +181,7 @@
         },
         {
           "id": 2,
-          "id_pro": 1, 
+          "id_pro": 1,
           "quantity": 2
         }
       ]
@@ -190,7 +190,7 @@
       "id": 3,
       "id_user": 1,
       "date": "12/5/2020",
-      "address":"Vĩnh Kim-Vĩnh Linh-Quảng Trị",
+      "address": "Vĩnh Kim-Vĩnh Linh-Quảng Trị",
       "status": 2,
       "orders_details": [
         {
@@ -209,7 +209,7 @@
       "id": 4,
       "id_user": 1,
       "date": "10/5/2020",
-      "address":"Quảng Trị",
+      "address": "15 Phạm Ngũ Lão",
       "status": 3,
       "orders_details": [
         {

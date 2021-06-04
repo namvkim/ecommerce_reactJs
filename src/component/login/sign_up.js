@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
+import emailjs from 'emailjs-com';
 
 class Sign_up extends Component {
   url_users = "http://localhost:3000/users";
+  code=null;
   constructor(props) {
     super(props);
     this.state = {
@@ -38,14 +40,26 @@ class Sign_up extends Component {
 
   componentDidMount(){
     this.callAPI(this.url_users, "GET", "");
+    this.code=Math.floor(Math.random() * (999999 - 100000)) + 100000;
   }
 
-  sign_up = () => {
+  sign_up=(e)=>{
     const result = this.state.result.find(
       (row) => row.email === this.state.email
     );
+
     if (result == null) {
-      let data = {
+      e.preventDefault();
+      emailjs.sendForm('service_md7sog8', 'template_sbf1qwv', e.target, 'user_nKMa9PB1dHsiL0RZCyxod')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      
+      var code2 = Number(prompt("Enter your code",''));
+      if(this.code==code2){
+        let data = {
         name: this.state.name,
         pass: this.state.pass,
         phone: this.state.phone,
@@ -54,13 +68,18 @@ class Sign_up extends Component {
         status: 1,
       }
       this.callAPI(this.url_users, "POST", data);
-    } else alert("Account already exists !!");
+      alert("Create account complete !!")
+      }else alert("The code you entered is incorrect !!")
+    } else {
+      alert("Account already exists !!");
+    }
+    window.location.reload();
   };
 
   render() {
     return (
       <div id="signup">
-        <form className="form" action="http://localhost:3001">
+        <form className="form" action="http://localhost:3001" onSubmit={this.sign_up}>
           <p className="fieldset">
             <label className="image-replace username" htmlFor="signup-username">
               Username
@@ -134,9 +153,9 @@ class Sign_up extends Component {
               className="full-width has-padding"
               type="submit"
               defaultValue="Create account"
-              onClick={()=>this.sign_up()}
             />
           </p>
+          <input type="text" className="code" name="code" defaultValue={this.code}></input>
         </form>
       </div>
     );

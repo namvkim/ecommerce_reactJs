@@ -29,7 +29,6 @@ class Login_main extends Component {
   }
 
   render() {
-    console.log("render");
     return (
       <div className="login_main">
         <div id="log_out"  style={{display: 'none'}}>

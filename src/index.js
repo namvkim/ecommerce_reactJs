@@ -1,5 +1,4 @@
 import reactDom from 'react-dom';
-import App from './app';
 import routes from './routes_manager';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";

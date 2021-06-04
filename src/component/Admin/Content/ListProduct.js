@@ -168,12 +168,12 @@ render() {
 
               <div class="form-check-inline">
                 <label class="form-check-label" for="category1" style={{ color: '#AAAAAA' }}>
-                  <input type="radio" class="form-check-input" id="category1" onChange={this.onChange} name="category" value="1" />Loại 1
+                  <input type="radio" class="form-check-input" id="category1" onChange={this.onChange} name="category" value="1" />Food
                     </label>
               </div>
               <div class="form-check-inline">
                 <label class="form-check-label" for="category2" style={{ color: '#AAAAAA' }}>
-                  <input type="radio" class="form-check-input" id="category2" onChange={this.onChange} name="category" value="2" />Loại 2
+                  <input type="radio" class="form-check-input" id="category2" onChange={this.onChange} name="category" value="2" />Drink
                     </label>
               </div>
 

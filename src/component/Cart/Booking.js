@@ -109,10 +109,10 @@ class Booking extends Component {
               <input type="text" name="to_name" className="infoe" defaultValue={user.name} />
               <br />
               <label className="infor_label" >Phone</label>
-              <input type="text" className="infoe" defaultValue={user.phone} />
+              <input type="text" name="phone" className="infoe" defaultValue={user.phone} />
               <br />
               <label className="infor_label" >Address</label>
-              <input type="text" className="infoe" defaultValue={user.address} />
+              <input type="text" name="address" className="infoe" defaultValue={user.address} />
              
             </div>
            <input type="text" name="to_email" className="infoe" defaultValue={user.email} hidden/>

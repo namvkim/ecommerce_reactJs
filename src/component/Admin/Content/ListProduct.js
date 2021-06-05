@@ -92,6 +92,8 @@ class ListProduct extends Component {
       price: item.price,
       category: item.category,
       describes: item.describes,
+      category: item.category,
+      status: item.status,
       id: item.id,
     });
   };
@@ -101,12 +103,13 @@ class ListProduct extends Component {
       method: "PUT",
       url: `http://localhost:3000/products/${this.state.id}`,
       data: {
+        id: this.state.id,
         name: this.state.name,
-        pics: [this.state.pic],
+        pics: this.state.pics,
         price: this.state.price,
         describes: this.state.describes,
         category: this.state.category,
-        status:1,
+        status:this.state.status,
       },
     })
       .then((res) => {

@@ -62,6 +62,7 @@ class Home_product extends Component {
       arr.push(itemAdd);
       localStorage.setItem("cartItems", JSON.stringify(arr));
     }
+    window.location.reload();
   };
 
   detail = (id) => {

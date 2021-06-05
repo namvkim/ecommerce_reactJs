@@ -13,12 +13,12 @@
 }
 
 .info_left{
-    width: 40%;
+    width:60%;
+   margin: 0 auto;
 }
 
-.info_right{
-    width: 60%;
-    margin-top: 16px;
+.infor_title{
+    color: #d18a06;
 }
 
 .booking_table{
@@ -32,4 +32,28 @@
 .booking_main button{
     padding: 10px 50px;
     margin: 0 20px;
+}
+.booking_cancel{
+    padding: 5px 20px;
+    background-color: #d18a06;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
+}
+.booking_ok{
+    padding: 5px 20px;
+    background-color: #d18a06;
+    margin: 10px;
+    color: white;
+    border-radius: 10px;
+}
+.infoe{
+   
+   margin-left: 20px;
+   border-radius: 25px;
+   height: 2rem;
+   font-size: 25px;
+}
+.infor_label{
+    width: 50px;
 }

@@ -4,7 +4,6 @@ import Layout_footer from "./component/layout/layout_footer";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import routes from "./routes";
 import Login_main from "./component/login/login_main";
-import Booking from "./component/Cart/Booking";
 
 class App extends Component {
   showContentMenu = (routes) => {
@@ -25,6 +24,7 @@ class App extends Component {
   };
 
   render() {
+    let num = JSON.parse(localStorage.getItem("cartItems")).length;
     return (
       <Router>
         <div className="layout_header">
@@ -33,9 +33,9 @@ class App extends Component {
             <ul className="layout_header_menu">
                 <Link to="/">HOME PAGE</Link>
                 <Link to="/history">HISTORY</Link>
-                <Link to="/recruitment">RECRUITMENT</Link>
+                <Link to="/menu">MENU</Link>
                 <Link to="/contact">CONTACT</Link>
-                <Link to="/cart"><i className="fas fa-cart-plus" />CART</Link>
+                <Link to="/cart"><i className="fas fa-cart-plus" />CART <span className="number">{num}</span></Link>
             </ul>
             <Login_main />
           </div>

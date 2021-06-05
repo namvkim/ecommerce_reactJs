@@ -1,2 +1,0 @@
-var imageUrl = "url('https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1550052451758-LL5DACGHWUM1MEAI6HOA/ke17ZwdGBToddI8pDm48kAob4oFDCylE9noX3TKqBxtZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyN51cvbdTmAkAomzhe6rlfk_96am3hwUz8aF9U6bzFRhN3LU7jr2sWsDb_b6WXWZ0/chup-anh-mon-an-com-ga-thuong-hai-8.jpg')";
-document.getElementById('content_advan_img2_1_1').style.backgroundImage = imageUrl;

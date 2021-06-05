@@ -11,6 +11,7 @@ class Danggiao extends Component {
       results: [],
       users: [],
       load:true,
+      us:""
     };
   }
 
@@ -71,7 +72,7 @@ class Danggiao extends Component {
         var total = 0;
         var product_result;
         var j = 1;
-        var us = this.state.users.find(row3=>row3.id===result.id_user);
+        this.state.us = this.state.users.find(row3=>row3.id===result.id_user);
         var element_details = result.orders_details.map((row, index) => {
           products.map((product) => {
             if (product.id === row.id_pro) product_result = product;
@@ -92,7 +93,7 @@ class Danggiao extends Component {
         return (
           <tr key={index}>
             <td>{i++}</td>
-            <td>{us.name}</td>
+            <td>{this.state.us==null?"":this.state.us.name}</td>
             <td>{total}</td>
             <td>{result.address}</td>
             <td>{result.date}</td>
@@ -147,7 +148,7 @@ class Danggiao extends Component {
     return (
       <div className="layout_body">
         <div className="book_content_user">
-          <table className="col-12">
+          <table className="col-12 white">
             <tbody>
               <tr>
                 <th>STT</th>

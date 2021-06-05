@@ -84,7 +84,7 @@ td {
 }
 .class_pro_post {
   /* width: 1200px; */
-  color: #000;
+  color: white;
   margin: 20px;
   /* width: 20%; */
 }
@@ -239,9 +239,19 @@ div.scroll {
 }
 
 .layout_header_admin {
-  position: fixed;
   width: 100%;
   top: 0;
+}
+
+.layout_header_fix{
+  position: fixed;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.admin_content{
+  margin-top: 180px;
 }
 
 .layout_header_main_admin {
@@ -307,4 +317,8 @@ div.scroll {
 
 .btn_xn {
   width: 86px;
+}
+
+.white{
+  color: white;
 }

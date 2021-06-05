@@ -4,7 +4,7 @@ import Cart from "./component/Cart/Cart";
 import Booking from "./component/Cart/Booking";
 import History from "./component/Cart/History";
 import Contact from "./component/Contact/contact";
-import Recruitment from "./component/Recruitment/recuitment";
+import Menu from "./component/Menu/Menu";
 
 const routes = [
   {
@@ -33,9 +33,9 @@ const routes = [
     main: () => <Contact />,
   },
   {
-    path: "/recruitment",
+    path: "/menu",
     exact: true,
-    main: () => <Recruitment />,
+    main: () => <Menu />,
   },
 ];
 

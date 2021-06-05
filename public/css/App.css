@@ -1,0 +1,11 @@
+.number{
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    border: 1px solid rgb(255, 38, 0);
+    padding: 1px 8px;
+    border-radius: 13px;
+    font-size: 15px;
+    background-color: rgb(212, 151, 212);
+    color: rgb(0, 0, 0);
+}
